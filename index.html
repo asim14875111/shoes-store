@@ -14,7 +14,7 @@
          }
       </style>
    </head>
-   <body class="w-fit  " >
+   <body>
       <div class="main-container">
       <nav class="pt-[0.5rem] px-[0.5rem]">
          <div class="navbar h-20 bg-[#050824] flex items-center pl-20 ">
@@ -37,8 +37,8 @@
             </svg>
          </div>
       </nav>
-      <div class="child-containers lg:flex">
-         <div class="first-child pr-16 flex flex-col pt-16 pl-20 ">
+      <div class="child-containers xl:flex">
+         <div class="first-child pr-16 flex  flex-col pt-16 pl-20 items-center  md:items-start ">
             <div class="checkout-heading  pb-16">
                <div class="div">
                   <h4 class="text-4xl pb-4 font-semibold" >Checkout</h4>
@@ -55,7 +55,7 @@
                   <h5  class="text-[#000034] text-sm" >Shipping & Billing</h5>
                </div>
             </div>
-            <div class="timer-div rounded-[32px]  bg-[#f5f5f8] pl-8 pt-8 pr-[140px] w-fit pb-6 ">
+            <div class="timer-div rounded-[32px]  bg-[#f5f5f8] pl-8 pt-8 pr-[140px]  pb-6 w-full md:w-fit ">
                <div class="timer-heading">
                   <p class="text-lg" >  🔥 Your cart is reserved for 10:00 minutes</p>
                </div>
@@ -67,11 +67,11 @@
                   <!-- <p class="bg-[#FFFFFF] flex gap-20 py-1.5 px-3 rounded-xl">00 </p> --> 
                </div>
             </div>
-            <div class="border-[#D6D8EE] w-fit pr-[23px] border rounded-[32px] pl-8 mt-9" >
+            <div class="border-[#D6D8EE] w-fit pr-[23px] border rounded-[32px] pl-8 mt-9  w-full md:w-fit" >
                <div>
                   <h5 class="text-xl font-semibold color-[#000034] pt-6 pb-6 " >Express Checkout</h5>
                </div>
-               <div class="flex  gap-5 pb-7  " >
+               <div class="  gap-5 pb-7 flex flex-col sm:flex sm:flex-row  " >
                   <div class="img1  bg-[#5a31f41a] border-[#5a31f499] border rounded-2xl px-7 py-4 items-center " >
                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="84" height="20" viewBox="0 0 84 20" fill="none">
                         <rect width="84" height="20" fill="url(#pattern0)"></rect>
@@ -89,11 +89,11 @@
                      border-[#ea403299] border rounded-2xl px-12 py-3 "><img src="images/G pay.png" alt=""></div>
                </div>
             </div>
-            <div>
+            <div  class="self-start" >
                <h4 class="text-2xl font-semibold py-5" >Contact Information</h4>
             </div>
-            <div class="email-adress text-xs m-0 text-[#84849a] bg-white relative -mb-2 ml-9 w-fit ">Email Address</div>
-            <div class="email-input  flex   border-[1.5px] rounded-full border-[#D6D8EE] gap-4 items-center py-4 w-fit pr-[255px] pl-10  ">
+            <div class="email-adress  text-xs m-0 text-[#84849a] bg-white relative -mb-2 ml-9 w-fit self-start ">Email Address</div>
+            <div class="email-input  flex   border-[1.5px] rounded-full border-[#D6D8EE] gap-4 items-center py-4 w-fit pr-[255px] pl-10   ">
                <div>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <g clip-path="url(#clip0_308_1503)">
@@ -106,13 +106,13 @@
                      </defs>
                   </svg>
                </div>
-               <div>   <input class="outline-0 font-medium text-black" placeholder="oleo_bone@gmail.com" type="email">
+               <div>   <input class="outline-0 font-medium text-black w-[100%]  md:w-auto " placeholder="oleo_bone@gmail.com" type="email">
                </div>
             </div>
-            <div class="shipping-address">
+            <div class="shipping-address  self-start ">
                <h6 class="text-2xl font-semibold  pt-16 pb-6 text-[#000034]">Shipping Address</h6>
             </div>
-            <div class="countries flex gap-3 border rounded-full w-[93.7%] border-[#D6D8EE] pl-8 py-4 ">
+            <div class="countries flex gap-3 border rounded-full  border-[#D6D8EE] pl-8 py-4  w-full sm:w-[93.7%] ">
                <div class="flex items-start">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path d="M9.99987 13.3333C10.3879 13.3341 10.7708 13.2445 11.1182 13.0717L12.7849 12.2383C13.6344 11.8165 14.1702 10.9485 14.1665 10V7.52752C14.1695 6.5799 13.6337 5.71295 12.7849 5.2917L11.1182 4.45838C10.414 4.10838 9.58655 4.10838 8.88237 4.45838L7.21569 5.2917C6.36655 5.71271 5.83042 6.57975 5.83319 7.52752V10C5.83014 10.9479 6.36588 11.8151 7.21487 12.2367L8.88155 13.07C9.22881 13.2434 9.6117 13.3336 9.99987 13.3333ZM7.49987 10V7.52752C7.5012 7.44252 7.51553 7.35818 7.54237 7.27752L9.35905 8.18584C9.76249 8.38748 10.2373 8.38748 10.6407 8.18584L12.4574 7.27752C12.4842 7.35818 12.4986 7.44252 12.4999 7.52752V10C12.5012 10.3162 12.3224 10.6056 12.0391 10.7458L10.3724 11.5792C10.1374 11.6954 9.86159 11.6954 9.62659 11.5792L7.95991 10.7458C7.67682 10.6053 7.49838 10.316 7.49987 10ZM15.8332 18.3333H13.5757L16.4815 15.6483C20.0614 12.0686 20.0615 6.26459 16.4817 2.68471C12.9019 -0.895176 7.09799 -0.895215 3.51811 2.68451C-0.0617718 6.26424 -0.0618502 12.0683 3.51792 15.6481C3.52577 15.656 6.42405 18.3333 6.42405 18.3333H4.16655C3.70631 18.3333 3.33323 18.7064 3.33323 19.1667C3.33323 19.6269 3.70631 20 4.16655 20H15.8332C16.2935 20 16.6665 19.6269 16.6665 19.1667C16.6665 18.7065 16.2934 18.3333 15.8332 18.3333ZM4.69655 3.86334C7.61905 0.927715 12.368 0.91709 15.3036 3.83959C18.2392 6.76209 18.2499 11.511 15.3274 14.4467L12.0065 17.5142C10.8731 18.5825 9.10163 18.5763 7.97573 17.5L4.69655 14.47C1.77213 11.5392 1.77217 6.7942 4.69655 3.86334Z" fill="#979AB8"></path>
@@ -126,7 +126,7 @@
                   <option  class="text-[979ab8]" >Poland</option>
                </select>
             </div>
-            <div class="names-input flex gap-5 pt-6 ">
+            <div class="names-input  gap-5 pt-6 flex flex-col w-full sm:w-auto    sm:flex sm:flex-row ">
                <div>
                   <h6 class="text-xs relative bg-white w-fit px-1 text-[#84849a] ml-9 -mb-2 " >First Name</h6>
                   <div class="inp-div   flex gap-[10px] pl-[1.5rem] py-3 rounded-full font-medium border border-[#D6D8EE]">
@@ -163,7 +163,7 @@
                   </div>
                </div>
             </div>
-            <div  class="adress w-fit pr-[260px] flex gap-3 mt-9 font-medium py-3 pl-10 border border-[#D6D8EE] rounded-full ">
+            <div  class="adress w-fit pr-[260px] flex gap-3 mt-9 font-medium py-3 pl-10 border border-[#D6D8EE] rounded-full w-full sm:w-auto ">
                <div class="camera-img">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <g clip-path="url(#clip0_376_1728)">
@@ -178,7 +178,7 @@
                </div>
                <input type="text" class="outline-0" placeholder="Address">
             </div>
-            <div class="names-input flex gap-5 pt-6 ">
+            <div class="names-input  gap-5 pt-6 w-full  flex flex-col sm:w-auto sm:flex  sm:flex-row ">
                <div>
                   <div class="inp-div   flex gap-4 pl-[2.26rem] py-3 rounded-full pr-[18px] font-medium border border-[#D6D8EE]">
                      <input type="text" placeholder="City" class="outline-0 w-11/12">
@@ -190,7 +190,7 @@
                   </div>
                </div>
             </div>
-            <div class="shipping-method">
+            <div class="shipping-method  self-start ">
                <h6 class="text-2xl font-medium  pt-16 pb-6 text-[#000034]">Shipping method</h6>
             </div>
             <div class="checkboxes">
@@ -214,11 +214,11 @@
                </div>
                <!-- <div class="checkbox2"></div> -->
             </div>
-            <div class="payment-method">
+            <div class="payment-method self-start">
                <h6 class="text-2xl font-semibold  pt-16 pb-2 text-[#000034]">Payment method</h6>
                <p  class="text-[#84849a]" >All transaction are secured and encryted</p>
             </div>
-            <div class="email-adress text-xs m-0 text-[#84849a] bg-white relative -mb-2 ml-9 mt-8  w-fit ">Card Number</div>
+            <div class="email-adress text-xs m-0 self-start text-[#84849a] bg-white relative -mb-2 ml-9 mt-8  w-fit ">Card Number</div>
             <div class="number-input  flex w-fit pr-[255px]  border-[1.5px] rounded-full border-[#D6D8EE] gap-4 items-center py-4 pl-10  ">
                <div>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -269,11 +269,11 @@
                <input type="checkbox">
                <p class="text-sm text-[#4b4e68] .leading" >By checking this box,I acknowledge that i have read and agree to the <span class="font-bold text-[#000034]">Terms of Service,</span> and <span class="font-bold text-[#000034]" >Monthly Billing Terms</span> of this website and want to opt-in for the monthly billed Dream Collection Club &reg; </p>
             </div>
-            <div class="billing-address">
+            <div class="billing-address self-start">
                <h6 class="text-2xl font-semibold  pt-16 pb-2 text-[#000034]">Billing Address</h6>
                <p class="text-[#84849a] text-sm " >Specify the address for your payment option</p>
             </div>
-            <div class="last-check-boxes  pt-6 " >
+            <div class="last-check-boxes  pt-6 self-start " >
                <div class="flex gap-5 "  >
                   <input type="checkbox">
                   <p  class="font-normal text-[#4b4e68]" >Same as shipping address</p>
@@ -292,7 +292,7 @@
                </div>
             </div>
          </div>
-         <div class="second-child  pt-[3.75rem] pl-[3.75rem] pr-[4.5rem] bg-[#fafbfc] w-full">
+         <div class="second-child   pt-[3.75rem] pl-[3.75rem] pr-[4.5rem] bg-[#fafbfc] w-full items-center  md:items-start">
             <div class="first-cart flex items-center gap-60 ">
                <div class="img-nd-heading flex items-center gap-5 ">
                   <img src="images/Group 1000004336-8f86fa9f.png" alt="">

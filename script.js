@@ -39,5 +39,5 @@ intervalid = setInterval(updateTimer,1000)
 function savedata(){
     const inpvalue = document.getElementById('email-inp').value
     const inp2value = document.getElementById('first-name-inp').value
-    localStorage.setItem(inpvalue,inp2value)
+    localStorage.setItem("Email" , inpvalue)
 }

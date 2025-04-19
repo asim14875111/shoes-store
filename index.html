@@ -7,12 +7,9 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+Todhri&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
       <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="style.css">
       <title>Document</title>
-      <style>
-         body{
-         font-family: "Poppins", sans-serif;
-         }
-      </style>
+ 
    </head>
    <body>
       <div class="main-container">
@@ -38,7 +35,7 @@
          </div>
       </nav>
       <div class="child-containers xl:flex">
-         <div class="first-child pr-16 flex  flex-col pt-16 pl-20 items-center  md:items-start ">
+         <div class="first-child pr-[1.7rem] flex  flex-col pt-16 pl-24 items-center  md:items-start ">
             <div class="checkout-heading  pb-16">
                <div class="div">
                   <h4 class="text-4xl pb-4 font-semibold" >Checkout</h4>
@@ -61,7 +58,7 @@
                </div>
                <div id="timer"  class="timer flex flex-row items-center gap-1 pt-4 pb-2 ">
                   <!-- <p  class="bg-[#FFFFFF] py-1.5 px-3 rounded-xl" >00</p>
-                  <p  >:</p> -->
+                     <p  >:</p> -->
                   <!-- <p id="" class="bg-[#FFFFFF] py-1.5 px-3 rounded-xl">20</p> -->
                   <!-- <p> : </p> -->
                   <!-- <p class="bg-[#FFFFFF] flex gap-20 py-1.5 px-3 rounded-xl">00 </p> --> 
@@ -93,7 +90,7 @@
                <h4 class="text-2xl font-semibold py-5" >Contact Information</h4>
             </div>
             <div class="email-adress  text-xs m-0 text-[#84849a] bg-white relative -mb-2 ml-9 w-fit self-start ">Email Address</div>
-            <div class="email-input  flex   border-[1.5px] rounded-full border-[#D6D8EE] gap-4 items-center py-4 w-fit pr-[255px] pl-10   ">
+            <div  class="email-input  flex   border-[1.5px] rounded-full border-[#D6D8EE] gap-4 items-center py-4 w-fit pr-[255px] pl-10   ">
                <div>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <g clip-path="url(#clip0_308_1503)">
@@ -106,7 +103,7 @@
                      </defs>
                   </svg>
                </div>
-               <div>   <input class="outline-0 font-medium text-black w-[100%]  md:w-auto " placeholder="oleo_bone@gmail.com" type="email">
+               <div>   <input class="outline-0 font-medium text-black w-[100%]  md:w-auto " placeholder="oleo_bone@gmail.com" id="email-inp" type="email">
                </div>
             </div>
             <div class="shipping-address  self-start ">
@@ -129,7 +126,7 @@
             <div class="names-input  gap-5 pt-6 flex flex-col w-full sm:w-auto    sm:flex sm:flex-row ">
                <div>
                   <h6 class="text-xs relative bg-white w-fit px-1 text-[#84849a] ml-9 -mb-2 " >First Name</h6>
-                  <div class="inp-div   flex gap-[10px] pl-[1.5rem] py-3 rounded-full font-medium border border-[#D6D8EE]">
+                  <div  class="inp-div   flex gap-[10px] pl-[1.5rem] py-3 rounded-full font-medium border border-[#D6D8EE]">
                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_355_687)">
                            <path d="M10 10C10.9889 10 11.9556 9.70676 12.7779 9.15735C13.6001 8.60794 14.241 7.82705 14.6194 6.91342C14.9978 5.99979 15.0969 4.99446 14.9039 4.02455C14.711 3.05465 14.2348 2.16373 13.5355 1.46447C12.8363 0.765206 11.9454 0.289002 10.9755 0.0960758C10.0055 -0.0968503 9.00021 0.00216643 8.08658 0.380605C7.17295 0.759043 6.39206 1.39991 5.84265 2.22215C5.29324 3.0444 5 4.0111 5 5C5.00132 6.32568 5.52853 7.59668 6.46593 8.53407C7.40332 9.47147 8.67432 9.99868 10 10ZM10 1.66667C10.6593 1.66667 11.3037 1.86217 11.8519 2.22844C12.4001 2.59471 12.8273 3.1153 13.0796 3.72439C13.3319 4.33348 13.3979 5.0037 13.2693 5.6503C13.1407 6.29691 12.8232 6.89085 12.357 7.35703C11.8908 7.8232 11.2969 8.14067 10.6503 8.26929C10.0037 8.3979 9.33348 8.33189 8.72439 8.0796C8.1153 7.82731 7.59471 7.40007 7.22844 6.8519C6.86216 6.30374 6.66667 5.65927 6.66667 5C6.66667 4.11595 7.01786 3.2681 7.64298 2.64298C8.2681 2.01786 9.11595 1.66667 10 1.66667Z" fill="#84849A"></path>
@@ -141,13 +138,13 @@
                            </clipPath>
                         </defs>
                      </svg>
-                     <input type="text" placeholder="Oleo" class="outline-0 ">
+                     <input id="first-name-inp" type="text" placeholder="Oleo" class="outline-0 ">
                   </div>
                </div>
                <div>
                   <h6 class="text-xs relative bg-white w-fit px-1 text-[#84849a] ml-9 -mb-2 " >last Name</h6>
                   <div class="inp-div flex gap-[10px] 
-                  pl-[1.5rem] py-3 rounded-full font-medium border border-[#D6D8EE]" >
+                     pl-[1.5rem] py-3 rounded-full font-medium border border-[#D6D8EE]" >
                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_355_687)">
                            <path d="M10 10C10.9889 10 11.9556 9.70676 12.7779 9.15735C13.6001 8.60794 14.241 7.82705 14.6194 6.91342C14.9978 5.99979 15.0969 4.99446 14.9039 4.02455C14.711 3.05465 14.2348 2.16373 13.5355 1.46447C12.8363 0.765206 11.9454 0.289002 10.9755 0.0960758C10.0055 -0.0968503 9.00021 0.00216643 8.08658 0.380605C7.17295 0.759043 6.39206 1.39991 5.84265 2.22215C5.29324 3.0444 5 4.0111 5 5C5.00132 6.32568 5.52853 7.59668 6.46593 8.53407C7.40332 9.47147 8.67432 9.99868 10 10ZM10 1.66667C10.6593 1.66667 11.3037 1.86217 11.8519 2.22844C12.4001 2.59471 12.8273 3.1153 13.0796 3.72439C13.3319 4.33348 13.3979 5.0037 13.2693 5.6503C13.1407 6.29691 12.8232 6.89085 12.357 7.35703C11.8908 7.8232 11.2969 8.14067 10.6503 8.26929C10.0037 8.3979 9.33348 8.33189 8.72439 8.0796C8.1153 7.82731 7.59471 7.40007 7.22844 6.8519C6.86216 6.30374 6.66667 5.65927 6.66667 5C6.66667 4.11595 7.01786 3.2681 7.64298 2.64298C8.2681 2.01786 9.11595 1.66667 10 1.66667Z" fill="#84849A"></path>
@@ -267,7 +264,7 @@
             </div>
             <div class="terms-of-services flex items-start  w-[570px] gap-3 pt-6">
                <input type="checkbox">
-               <p class="text-sm text-[#4b4e68] .leading" >By checking this box,I acknowledge that i have read and agree to the <span class="font-bold text-[#000034]">Terms of Service,</span> and <span class="font-bold text-[#000034]" >Monthly Billing Terms</span> of this website and want to opt-in for the monthly billed Dream Collection Club &reg; </p>
+               <p class="text-sm text-[#4b4e68] .leading" >By checking this box,I acknowledge that i have read and agree  to the <br> <span class="font-bold text-[#000034]">Terms of Service,</span> and <span class="font-bold text-[#000034]" >Monthly Billing Terms</span> of this website and want to <br> opt-in for the monthly billed Dream Collection Club &reg; </p>
             </div>
             <div class="billing-address self-start">
                <h6 class="text-2xl font-semibold  pt-16 pb-2 text-[#000034]">Billing Address</h6>
@@ -275,15 +272,102 @@
             </div>
             <div class="last-check-boxes  pt-6 self-start " >
                <div class="flex gap-5 "  >
-                  <input type="checkbox">
+                  <input class="button" id="closeModal" type="checkbox">
                   <p  class="font-normal text-[#4b4e68]" >Same as shipping address</p>
                </div>
                <div class="flex gap-5 pt-5 "  >
-                  <input type="checkbox">
-                  <p  class="font-normal text-[#4b4e68]" >Use a different billing address</p>
+                  <input  class="button" id="openModal" type="checkbox">
+                  <p   class="font-normal text-[#4b4e68]" >Use a different billing address</p>
+
+
+
+
                </div>
-               <div class="pt-12 pb-16 " >
-                  <button  class="bg-[#050824] text-white flex items-center px-10 gap-1 text-lg font-semibold rounded-full py-3.5 " >
+<!--                
+  <div class="modal" id="modal">
+   <div class="modal-inner">
+      <div class="countries flex gap-3 border rounded-full  border-[#D6D8EE] pl-8 py-4  w-full sm:w-[93.7%] ">
+         <div class="flex items-start">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M9.99987 13.3333C10.3879 13.3341 10.7708 13.2445 11.1182 13.0717L12.7849 12.2383C13.6344 11.8165 14.1702 10.9485 14.1665 10V7.52752C14.1695 6.5799 13.6337 5.71295 12.7849 5.2917L11.1182 4.45838C10.414 4.10838 9.58655 4.10838 8.88237 4.45838L7.21569 5.2917C6.36655 5.71271 5.83042 6.57975 5.83319 7.52752V10C5.83014 10.9479 6.36588 11.8151 7.21487 12.2367L8.88155 13.07C9.22881 13.2434 9.6117 13.3336 9.99987 13.3333ZM7.49987 10V7.52752C7.5012 7.44252 7.51553 7.35818 7.54237 7.27752L9.35905 8.18584C9.76249 8.38748 10.2373 8.38748 10.6407 8.18584L12.4574 7.27752C12.4842 7.35818 12.4986 7.44252 12.4999 7.52752V10C12.5012 10.3162 12.3224 10.6056 12.0391 10.7458L10.3724 11.5792C10.1374 11.6954 9.86159 11.6954 9.62659 11.5792L7.95991 10.7458C7.67682 10.6053 7.49838 10.316 7.49987 10ZM15.8332 18.3333H13.5757L16.4815 15.6483C20.0614 12.0686 20.0615 6.26459 16.4817 2.68471C12.9019 -0.895176 7.09799 -0.895215 3.51811 2.68451C-0.0617718 6.26424 -0.0618502 12.0683 3.51792 15.6481C3.52577 15.656 6.42405 18.3333 6.42405 18.3333H4.16655C3.70631 18.3333 3.33323 18.7064 3.33323 19.1667C3.33323 19.6269 3.70631 20 4.16655 20H15.8332C16.2935 20 16.6665 19.6269 16.6665 19.1667C16.6665 18.7065 16.2934 18.3333 15.8332 18.3333ZM4.69655 3.86334C7.61905 0.927715 12.368 0.91709 15.3036 3.83959C18.2392 6.76209 18.2499 11.511 15.3274 14.4467L12.0065 17.5142C10.8731 18.5825 9.10163 18.5763 7.97573 17.5L4.69655 14.47C1.77213 11.5392 1.77217 6.7942 4.69655 3.86334Z" fill="#979AB8"></path>
+            </svg>
+         </div>
+         <select style="color: #979ab8; width: 87%; font-weight: normal; font-size: 16px; outline: none;" >
+            <option  class="text-[979ab8]" >Country</option>
+            <option  class="text-[979ab8]" >Pakistan</option>
+            <option  class="text-[979ab8]" >England</option>
+            <option  class="text-[979ab8]" >Germany</option>
+            <option  class="text-[979ab8]" >Poland</option>
+         </select>
+      </div>
+      <div class="names-input  gap-5 pt-6 flex flex-col w-full sm:w-auto    sm:flex sm:flex-row ">
+         <div>
+            <h6 class="text-xs relative bg-white w-fit px-1 text-[#84849a] ml-9 -mb-2 " >First Name</h6>
+            <div class="inp-div   flex gap-[10px] pl-[1.5rem] py-3 rounded-full font-medium border border-[#D6D8EE]">
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_355_687)">
+                     <path d="M10 10C10.9889 10 11.9556 9.70676 12.7779 9.15735C13.6001 8.60794 14.241 7.82705 14.6194 6.91342C14.9978 5.99979 15.0969 4.99446 14.9039 4.02455C14.711 3.05465 14.2348 2.16373 13.5355 1.46447C12.8363 0.765206 11.9454 0.289002 10.9755 0.0960758C10.0055 -0.0968503 9.00021 0.00216643 8.08658 0.380605C7.17295 0.759043 6.39206 1.39991 5.84265 2.22215C5.29324 3.0444 5 4.0111 5 5C5.00132 6.32568 5.52853 7.59668 6.46593 8.53407C7.40332 9.47147 8.67432 9.99868 10 10ZM10 1.66667C10.6593 1.66667 11.3037 1.86217 11.8519 2.22844C12.4001 2.59471 12.8273 3.1153 13.0796 3.72439C13.3319 4.33348 13.3979 5.0037 13.2693 5.6503C13.1407 6.29691 12.8232 6.89085 12.357 7.35703C11.8908 7.8232 11.2969 8.14067 10.6503 8.26929C10.0037 8.3979 9.33348 8.33189 8.72439 8.0796C8.1153 7.82731 7.59471 7.40007 7.22844 6.8519C6.86216 6.30374 6.66667 5.65927 6.66667 5C6.66667 4.11595 7.01786 3.2681 7.64298 2.64298C8.2681 2.01786 9.11595 1.66667 10 1.66667Z" fill="#84849A"></path>
+                     <path d="M10 11.6672C8.01155 11.6694 6.10518 12.4603 4.69914 13.8664C3.29309 15.2724 2.50221 17.1788 2.5 19.1672C2.5 19.3883 2.5878 19.6002 2.74408 19.7565C2.90036 19.9128 3.11232 20.0006 3.33333 20.0006C3.55435 20.0006 3.76631 19.9128 3.92259 19.7565C4.07887 19.6002 4.16667 19.3883 4.16667 19.1672C4.16667 17.6201 4.78125 16.1364 5.87521 15.0424C6.96917 13.9485 8.4529 13.3339 10 13.3339C11.5471 13.3339 13.0308 13.9485 14.1248 15.0424C15.2188 16.1364 15.8333 17.6201 15.8333 19.1672C15.8333 19.3883 15.9211 19.6002 16.0774 19.7565C16.2337 19.9128 16.4457 20.0006 16.6667 20.0006C16.8877 20.0006 17.0996 19.9128 17.2559 19.7565C17.4122 19.6002 17.5 19.3883 17.5 19.1672C17.4978 17.1788 16.7069 15.2724 15.3009 13.8664C13.8948 12.4603 11.9884 11.6694 10 11.6672Z" fill="#84849A"></path>
+                  </g>
+                  <defs>
+                     <clipPath id="clip0_355_687">
+                        <rect width="20" height="20" fill="white"></rect>
+                     </clipPath>
+                  </defs>
+               </svg>
+               <input type="text" placeholder="Oleo" class="outline-0 ">
+            </div>
+         </div>
+         <div>
+            <h6 class="text-xs relative bg-white w-fit px-1 text-[#84849a] ml-9 -mb-2 " >last Name</h6>
+            <div class="inp-div flex gap-[10px] 
+               pl-[1.5rem] py-3 rounded-full font-medium border border-[#D6D8EE]" >
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_355_687)">
+                     <path d="M10 10C10.9889 10 11.9556 9.70676 12.7779 9.15735C13.6001 8.60794 14.241 7.82705 14.6194 6.91342C14.9978 5.99979 15.0969 4.99446 14.9039 4.02455C14.711 3.05465 14.2348 2.16373 13.5355 1.46447C12.8363 0.765206 11.9454 0.289002 10.9755 0.0960758C10.0055 -0.0968503 9.00021 0.00216643 8.08658 0.380605C7.17295 0.759043 6.39206 1.39991 5.84265 2.22215C5.29324 3.0444 5 4.0111 5 5C5.00132 6.32568 5.52853 7.59668 6.46593 8.53407C7.40332 9.47147 8.67432 9.99868 10 10ZM10 1.66667C10.6593 1.66667 11.3037 1.86217 11.8519 2.22844C12.4001 2.59471 12.8273 3.1153 13.0796 3.72439C13.3319 4.33348 13.3979 5.0037 13.2693 5.6503C13.1407 6.29691 12.8232 6.89085 12.357 7.35703C11.8908 7.8232 11.2969 8.14067 10.6503 8.26929C10.0037 8.3979 9.33348 8.33189 8.72439 8.0796C8.1153 7.82731 7.59471 7.40007 7.22844 6.8519C6.86216 6.30374 6.66667 5.65927 6.66667 5C6.66667 4.11595 7.01786 3.2681 7.64298 2.64298C8.2681 2.01786 9.11595 1.66667 10 1.66667Z" fill="#84849A"></path>
+                     <path d="M10 11.6672C8.01155 11.6694 6.10518 12.4603 4.69914 13.8664C3.29309 15.2724 2.50221 17.1788 2.5 19.1672C2.5 19.3883 2.5878 19.6002 2.74408 19.7565C2.90036 19.9128 3.11232 20.0006 3.33333 20.0006C3.55435 20.0006 3.76631 19.9128 3.92259 19.7565C4.07887 19.6002 4.16667 19.3883 4.16667 19.1672C4.16667 17.6201 4.78125 16.1364 5.87521 15.0424C6.96917 13.9485 8.4529 13.3339 10 13.3339C11.5471 13.3339 13.0308 13.9485 14.1248 15.0424C15.2188 16.1364 15.8333 17.6201 15.8333 19.1672C15.8333 19.3883 15.9211 19.6002 16.0774 19.7565C16.2337 19.9128 16.4457 20.0006 16.6667 20.0006C16.8877 20.0006 17.0996 19.9128 17.2559 19.7565C17.4122 19.6002 17.5 19.3883 17.5 19.1672C17.4978 17.1788 16.7069 15.2724 15.3009 13.8664C13.8948 12.4603 11.9884 11.6694 10 11.6672Z" fill="#84849A"></path>
+                  </g>
+                  <defs>
+                     <clipPath id="clip0_355_687">
+                        <rect width="20" height="20" fill="white"></rect>
+                     </clipPath>
+                  </defs>
+               </svg>
+               <input  class="outline-0" type="text" placeholder="Bone">
+            </div>
+         </div>
+      </div>
+      <div  class="adress w-fit pr-[260px] flex gap-3 mt-9 font-medium py-3 pl-10 border border-[#D6D8EE] rounded-full w-full sm:w-auto ">
+         <div class="camera-img">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <g clip-path="url(#clip0_376_1728)">
+                  <path d="M18.1667 4.64919L12.3333 0.71252C11.6452 0.244517 10.8322 -0.0057373 9.99999 -0.0057373C9.16778 -0.0057373 8.3548 0.244517 7.66665 0.71252L1.83332 4.64919C1.26845 5.031 0.805899 5.5456 0.486256 6.14783C0.166612 6.75007 -0.000360608 7.42155 -1.47225e-05 8.10335V15.8334C0.00130849 16.938 0.44072 17.9971 1.22184 18.7782C2.00295 19.5593 3.06199 19.9987 4.16665 20H15.8333C16.938 19.9987 17.997 19.5593 18.7781 18.7782C19.5593 17.9971 19.9987 16.938 20 15.8334V8.10335C20.0003 7.42155 19.8334 6.75007 19.5137 6.14783C19.1941 5.5456 18.7315 5.031 18.1667 4.64919ZM18.3333 15.8334C18.3333 16.4964 18.0699 17.1323 17.6011 17.6011C17.1322 18.07 16.4964 18.3334 15.8333 18.3334H4.16665C3.50361 18.3334 2.86773 18.07 2.39889 17.6011C1.93004 17.1323 1.66665 16.4964 1.66665 15.8334V8.10335C1.66663 7.69412 1.76707 7.29114 1.95915 6.92978C2.15123 6.56843 2.42909 6.25975 2.76832 6.03085L8.60165 2.09419C9.01414 1.81395 9.50131 1.66412 9.99999 1.66412C10.4987 1.66412 10.9858 1.81395 11.3983 2.09419L17.2317 6.03085C17.5709 6.25975 17.8487 6.56843 18.0408 6.92978C18.2329 7.29114 18.3333 7.69412 18.3333 8.10335V15.8334ZM9.99999 5.83835C9.01019 5.83823 8.04262 6.13189 7.21985 6.68212C6.39709 7.23235 5.75614 8.0144 5.37821 8.92921C5.00027 9.84401 4.90236 10.8504 5.09686 11.8209C5.29137 12.7914 5.76955 13.6823 6.47082 14.3809L7.99082 15.8675C8.52943 16.3891 9.2498 16.6808 9.99957 16.6808C10.7493 16.6808 11.4697 16.3891 12.0083 15.8675L13.5358 14.3742C14.2352 13.6749 14.7115 12.784 14.9045 11.814C15.0975 10.844 14.9984 9.83856 14.6199 8.92485C14.2415 8.01115 13.6005 7.23021 12.7782 6.68081C11.9558 6.13142 10.989 5.83823 9.99999 5.83835ZM12.3633 13.1892L10.8425 14.6767C10.6165 14.8956 10.3142 15.0179 9.99957 15.0179C9.68495 15.0179 9.38266 14.8956 9.15665 14.6767L7.64249 13.1959C7.17661 12.73 6.85926 12.1364 6.73051 11.4903C6.60176 10.8441 6.66739 10.1743 6.9191 9.56542C7.17081 8.95654 7.59733 8.4359 8.14476 8.06928C8.6922 7.70266 9.33601 7.5065 9.99487 7.50557C10.6537 7.50464 11.2981 7.69898 11.8466 8.06406C12.395 8.42913 12.823 8.94855 13.0764 9.55672C13.3299 10.1649 13.3974 10.8345 13.2705 11.481C13.1435 12.1276 12.8279 12.722 12.3633 13.1892ZM10.8333 10.8334C10.8333 10.9982 10.7844 11.1593 10.6929 11.2963C10.6013 11.4334 10.4712 11.5402 10.3189 11.6033C10.1666 11.6663 9.99906 11.6828 9.83741 11.6507C9.67576 11.6185 9.52727 11.5392 9.41073 11.4226C9.29419 11.3061 9.21482 11.1576 9.18266 10.9959C9.15051 10.8343 9.16701 10.6667 9.23009 10.5145C9.29316 10.3622 9.39997 10.232 9.53701 10.1405C9.67405 10.0489 9.83517 10 9.99999 10C10.221 10 10.433 10.0878 10.5892 10.2441C10.7455 10.4004 10.8333 10.6123 10.8333 10.8334Z" fill="#979AB8"></path>
+               </g>
+               <defs>
+                  <clipPath id="clip0_376_1728">
+                     <rect width="20" height="20" fill="white"></rect>
+                  </clipPath>
+               </defs>
+            </svg>
+         </div>
+         <input type="text" class="outline-0" placeholder="Address">
+      </div>
+      <div class="names-input  gap-5 pt-6 w-full  flex flex-col sm:w-auto sm:flex  sm:flex-row ">
+         <div>
+            <div class="inp-div   flex gap-4 pl-[2.26rem] py-3 rounded-full pr-[18px] font-medium border border-[#D6D8EE]">
+               <input type="text" placeholder="City" class="outline-0 w-11/12">
+            </div>
+         </div>
+         <div>
+            <div class="inp-div flex gap-4 pl-[2.26rem] py-3 rounded-full font-medium border border-[#D6D8EE] w-12/12  pr-[18px]" >
+               <input  class="outline-0  w-11/12" type="text" placeholder="Postal Code" >
+            </div>
+         </div>
+      </div>
+   </div>
+  </div> -->
+               <div class="pt-12 pb-16">
+                  <button onclick="savedata()" class="bg-[#050824] text-white flex items-center px-10 gap-1 text-lg font-semibold rounded-full py-3.5 " >
                      Complete Order 
                      <svg  width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M23.124 4.87897L18.538 0.292969L17.124 1.70697L21.386 5.96997L0 5.99997V7.99997L21.446 7.96997L17.123 12.293L18.537 13.707L23.124 9.12097C23.6847 8.55748 23.9995 7.79489 23.9995 6.99997C23.9995 6.20504 23.6847 5.44246 23.124 4.87897Z" fill="white"></path>
@@ -444,8 +528,8 @@
       </div>
 
 
-      <div ></div>
-
-      <script src="script.js"></script>
+      <script src="script.js" >
+    
+      </script>
    </body>
 </html>

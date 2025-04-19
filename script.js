@@ -35,6 +35,7 @@ intervalid = setInterval(updateTimer,1000)
 //    modal.classList.remove("open");
 //  })
 
+let shipaddress = []
 
 function savedata(){
     const inpvalue = document.getElementById('email-inp').value
@@ -48,16 +49,24 @@ function savedata(){
    const cardname = document.getElementById("card-name").value
    const mmyy = document.getElementById("mm-yy").value
    const cvv = document.getElementById("cvv").value
-    localStorage.setItem("Email" , inpvalue)
-    localStorage.setItem("Country",countries)
-    localStorage.setItem("First name",fname)
-    localStorage.setItem("Last name",lname)
-    localStorage.setItem(" Address",address)
-    localStorage.setItem("City",city)
-    localStorage.setItem("Postal code",postalcode)
-    localStorage.setItem("Card Number",cardnum)
-    localStorage.setItem("Card Name",cardname)
-    localStorage.setItem("Month, year",mmyy) 
-    localStorage.setItem("Cvv",cvv) 
 
-}
+
+   const shippingaddress = {countries,fname,lname,address,city,postalcode}
+
+   shipaddress.push(shippingaddress)
+// console.log(shipaddress)
+
+
+localStorage.setItem("shipiing address", shipaddress.value)
+    // localStorage.setItem("Email" , inpvalue)
+    // localStorage.setItem("Country",countries)
+    // localStorage.setItem("First name",fname)
+    // localStorage.setItem("Last name",lname)
+    // localStorage.setItem(" Address",address)
+    // localStorage.setItem("City",city)
+    // localStorage.setItem("Postal code",postalcode)
+    // localStorage.setItem("Card Number",cardnum)
+    // localStorage.setItem("Card Name",cardname)
+    // localStorage.setItem("Month, year",mmyy) 
+    // localStorage.setItem("Cvv",cvv) 
+    }

@@ -30,6 +30,7 @@ align-items: center;
 justify-content: center;
 height: 0;
 margin-top: 120px;
+margin-bottom: 125px;
 }
 
 .modal.open{

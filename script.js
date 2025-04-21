@@ -23,12 +23,19 @@ const modal = document.getElementById("modal");
  openBtn.addEventListener("click", () =>{
    modal.classList.add("open");
 
+   const element = document.getElementById("modal")
+   element.style.marginTop = "120px"
+   element.style.marginBottom = "150px"
    if(modal.classList.add("open")){
 
    }
  })
 
  closeBtn.addEventListener("click", ()=>{
+  const element = document.getElementById("modal")
+
+     element.style.marginTop = "0px"
+   element.style.marginBottom = "0px"
    modal.classList.remove("open");
  })
 

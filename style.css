@@ -81,3 +81,9 @@ margin: 10px 0;
 background-color: black;
 padding: 50px;
 }
+
+
+.terms-of-services{
+display: flex;
+/* align-items: center; */
+} 

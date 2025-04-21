@@ -112,15 +112,32 @@ var email = document.forms["myform"]["inp"].value;
 if( email == ''  || email == null){
   alert("kindly fill the form!")
   return false
-}else{
-  box.style.display = 'block'
-
 }
+// else{
+//   box.style.display = 'block'
+
+// }
 
 // Reseting inputs after completing the order
 
 const dataform = document.getElementById('dataform')
-dataform.reset()
+
+
+
+const inpelement = document.getElementById("terms-of-services")
+
+
+  if(!inpelement.checked){
+    // preventDefault();
+    alert("Agree to the Terms of Service!")
+  }else{
+    box.style.display = 'block'
+    dataform.reset()
+
+
+  }
+
+
 
 } 
 

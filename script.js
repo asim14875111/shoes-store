@@ -1,22 +1,3 @@
-// const targetTime = 600;
-// let timeLeft = targetTime;
-// let intervalid;
-
-// function updateTimer(){
-
-//     const minutes = Math.floor(timeLeft/ 60)
-    
-//     const seconds = timeLeft % 60;
-//     document.getElementById("timer").innerHTML 
-//     = ` ${minutes}:${seconds.toString().padStart(2,'0')}
-//     `;
-
-//     timeLeft--;
-
-
-// }
-
-
 targettime = 600;
 let timeleft = targettime;
 
@@ -24,7 +5,7 @@ const countdowninterval = setInterval(() =>{
   const minutes = Math.floor(timeleft/ 60)
   const seconds = timeleft % 60;
   timeleft--; 
-  document.getElementById("timer").innerHTML =  (` ${minutes}:${seconds} `)
+  document.getElementById("timer").innerHTML =  (`${minutes}:${seconds} `)
 
   if(timeleft <= 0){
     clearInterval(countdowninterval);
@@ -34,7 +15,6 @@ const countdowninterval = setInterval(() =>{
 
 
 
-// intervalid = setInterval(updateTimer,1000)
 
 
 const openBtn = document.getElementById("openModal")
@@ -54,11 +34,13 @@ const modal = document.getElementById("modal");
 
 function savedata(){
 
+  // Email input
 
     const inpvalue = document.getElementById('email-inp').value
 
     localStorage.setItem("Email" , inpvalue)
 
+// Shipping Address
 
    const countries = document.getElementById("country").value
    const fname = document.getElementById("first-name-inp").value
@@ -68,14 +50,18 @@ function savedata(){
    const postalcode = document.getElementById("postalcode").value
 
 const data = {
-  Country : countries ,
+  Country : countries,
   firstname : fname,
   Lastname : lname,
   address : address,
   City : city,
-  Postalcode : postalcode,};
+  Postalcode : postalcode,
+};
 localStorage.setItem('Shipping Address', JSON.stringify(data));
 
+
+
+// Payment method
    const cardnum = document.getElementById("card-num").value
    const cardname = document.getElementById("card-name").value
    const mmyy = document.getElementById("mm-yy").value
@@ -91,6 +77,8 @@ localStorage.setItem('Shipping Address', JSON.stringify(data));
    localStorage.setItem
    ("Payment method",JSON.stringify(carddata))
 
+
+  //  Different shipping address
    
       const diffcountry = document.getElementById("diff-country").value
    const difffname = document.getElementById("diff-fname").value
@@ -111,10 +99,8 @@ const Differentbillingaddress = {
 localStorage.setItem("different billing address", JSON.stringify(Differentbillingaddress))
 
 
+// Not allowing user to add empty entry
 const box = document.getElementById("mybox");
-
-
-
 
 var email = document.forms["myform"]["inp"].value;
 
@@ -126,11 +112,14 @@ if( email == ''  || email == null){
 
 }
 
+// Reseting inputs after completing the order
 
 const dataform = document.getElementById('dataform')
 dataform.reset()
 
 } 
+
+
 
 
 function closediv(){

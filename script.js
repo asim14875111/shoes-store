@@ -1,23 +1,40 @@
-const targetTime = 600;
-let timeLeft = targetTime;
-let intervalid;
+// const targetTime = 600;
+// let timeLeft = targetTime;
+// let intervalid;
 
-function updateTimer(){
+// function updateTimer(){
 
-    const minutes = Math.floor(timeLeft/ 60)
+//     const minutes = Math.floor(timeLeft/ 60)
     
-    const seconds = timeLeft % 60;
-    document.getElementById("timer").innerHTML = ` ${minutes}:${seconds.toString().padStart(2,'0')}
-    `;
+//     const seconds = timeLeft % 60;
+//     document.getElementById("timer").innerHTML 
+//     = ` ${minutes}:${seconds.toString().padStart(2,'0')}
+//     `;
 
-    timeLeft--;
-
-
-}
-
-intervalid = setInterval(updateTimer,1000)
+//     timeLeft--;
 
 
+// }
+
+
+targettime = 600;
+let timeleft = targettime;
+
+const countdowninterval = setInterval(() =>{
+  const minutes = Math.floor(timeleft/ 60)
+  const seconds = timeleft % 60;
+  timeleft--; 
+  document.getElementById("timer").innerHTML =  (` ${minutes}:${seconds} `)
+
+  if(timeleft <= 0){
+    clearInterval(countdowninterval);
+    alert("time's up!")
+  }
+},1000)
+
+
+
+// intervalid = setInterval(updateTimer,1000)
 
 
 const openBtn = document.getElementById("openModal")
@@ -120,3 +137,7 @@ function closediv(){
 const box = document.getElementById('mybox')
 box.style.display = 'none'
 }
+
+
+
+

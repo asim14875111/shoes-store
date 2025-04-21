@@ -100,7 +100,7 @@
             <div  class="self-start" >
                <h4 class="text-2xl font-semibold py-5" >Contact Information</h4>
             </div>
-            <form id="dataform" autocomplete="off" >
+            <form name="myform" id="dataform" autocomplete="off" >
             <div class="email-adress  text-xs m-0 text-[#84849a] bg-white relative -mb-2 ml-9 w-fit self-start ">Email Address</div>
             <div  class="email-input  flex   border-[1.5px] rounded-full border-[#D6D8EE] gap-4 items-center py-4 w-fit pr-2  pl-10 w-full  ">
                <!-- pr-[255px]/   -->
@@ -117,7 +117,7 @@
                   </svg>
                </div>
                <div class="w-full" > 
-                    <input class="outline-0 w-full font-medium text-black w-[100%]  md:w-full " placeholder="oleo_bone@gmail.com" id="email-inp" type="email">
+                    <input name="inp" class="outline-0 w-full font-medium text-black w-[100%]  md:w-full " placeholder="oleo_bone@gmail.com" id="email-inp" type="email">
                </div>
             </div>
             <div class="shipping-address  self-start ">
@@ -152,7 +152,7 @@
                            </clipPath>
                         </defs>
                      </svg>
-                     <input id="first-name-inp" type="text" placeholder="Oleo" class="outline-0 ">
+                     <input name="fname" id="first-name-inp" type="text" placeholder="Oleo" class="outline-0 ">
                   </div>
                </div>
                <div>
@@ -188,7 +188,7 @@
                      </defs>
                   </svg>
                </div>
-               <input id="address" type="text" class="outline-0  w-full" placeholder="Address">
+               <input  id="address" type="text" class="outline-0  w-full" placeholder="Address">
             </div>
             <div class="names-input  gap-5 pt-6 w-full  flex flex-col sm:w-auto sm:flex  sm:flex-row ">
                <div>
@@ -198,7 +198,7 @@
                </div>
                <div>
                   <div class="inp-div flex gap-4 pl-[2.26rem] py-3 rounded-full font-medium border border-[#D6D8EE] w-12/12  pr-[18px]" >
-                     <input id="postalcode"  class="outline-0  w-11/12" type="text" placeholder="Postal Code" >
+                     <input  id="postalcode"  class="outline-0  w-11/12" type="text" placeholder="Postal Code" >
                   </div>
                </div>
             </div>
@@ -246,7 +246,7 @@
                      </defs>
                   </svg>
                </div>
-               <div class="w-full" ><input maxlength="12" id="card-num" class="outline-0 font-medium w-full text-black" placeholder="2587 9860 2354" type="number">
+               <div class="w-full" ><input  maxlength="12" id="card-num" class="outline-0 font-medium w-full text-black" placeholder="2587 9860 2354" type="number">
                </div>
             </div>
             <!-- pr-[255px] -->
@@ -264,18 +264,18 @@
                      </defs>
                   </svg>
                </div >
-               <div class="w-full" >   <input id="card-name" class="outline-0 font-medium w-full text-black" placeholder="Name on Card" type="text">
+               <div class="w-full" >   <input  id="card-name" class="outline-0 font-medium w-full text-black" placeholder="Name on Card" type="text">
                </div>
             </div>
             <div class="names-input flex gap-5 pt-6 ">
                <div>
                   <div  class="inp-div  pr-[12.5px]  flex gap-4 pl-[2.6rem] py-3 rounded-full font-medium border border-[#D6D8EE]">
-                     <input type="" id="mm-yy" placeholder="MM/YY" class="outline-0 w-11/12">
+                     <input  type="" id="mm-yy" placeholder="MM/YY" class="outline-0 w-11/12">
                   </div>
                </div>
                <div>
                   <div  class="inp-div flex gap-4 pr-[12.5px] pl-[2.6rem] py-3 rounded-full font-medium border border-[#D6D8EE] w-12/12">
-                     <input id="cvv" class="outline-0  w-12/12" type="text" placeholder=" CVV">
+                     <input  id="cvv" class="outline-0  w-12/12" type="text" placeholder=" CVV">
                   </div>
                </div>
             </div>

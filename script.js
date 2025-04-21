@@ -95,7 +95,20 @@ localStorage.setItem("different billing address", JSON.stringify(Differentbillin
 
 
 const box = document.getElementById("mybox");
-box.style.display = 'block'
+
+
+
+
+var email = document.forms["myform"]["inp"].value;
+
+if( email == ''  || email == null){
+  alert("kindly fill the form!")
+  return false
+}else{
+  box.style.display = 'block'
+
+}
+
 
 const dataform = document.getElementById('dataform')
 dataform.reset()

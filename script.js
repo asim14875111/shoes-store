@@ -35,50 +35,75 @@ const modal = document.getElementById("modal");
    modal.classList.remove("open");
  })
 
-let shipaddress = []
-
 function savedata(){
+
+
     const inpvalue = document.getElementById('email-inp').value
+
+    localStorage.setItem("Email" , inpvalue)
+
+
    const countries = document.getElementById("country").value
    const fname = document.getElementById("first-name-inp").value
    const lname = document.getElementById("last-name-inp").value
    const address = document.getElementById("address").value
    const city = document.getElementById("city").value
    const postalcode = document.getElementById("postalcode").value
+
+const data = {
+  Country : countries ,
+  firstname : fname,
+  Lastname : lname,
+  address : address,
+  City : city,
+  Postalcode : postalcode,};
+localStorage.setItem('Shipping Address', JSON.stringify(data));
+
    const cardnum = document.getElementById("card-num").value
    const cardname = document.getElementById("card-name").value
    const mmyy = document.getElementById("mm-yy").value
    const cvv = document.getElementById("cvv").value
-   const diffcountry = document.getElementById("diff-country").value
+
+
+   const carddata = {
+    Cardnumber : cardnum ,
+     Nameoncard : cardname,
+    Monthyear : mmyy,
+    Cvv : cvv,
+   }
+   localStorage.setItem
+   ("Payment method",JSON.stringify(carddata))
+
+   
+      const diffcountry = document.getElementById("diff-country").value
    const difffname = document.getElementById("diff-fname").value
    const difflastname = document.getElementById("diff-lname").value
    const diffinp = document.getElementById("2nd-inp").value
    const diffcity = document.getElementById("diff-city").value
    const diffcode = document.getElementById("diff-code").value
 
+const Differentbillingaddress = {
+  Country : diffcountry,
+  Firstname: difffname, 
+  Lastname: difflastname,
+  Address:diffinp,
+  City: diffcity,
+  PostalCode:diffcode,
+}
 
-//    const shippingaddress = {countries,fname,lname,address,city,postalcode}
-
-//    shipaddress.push(shippingaddress)
-// console.log(shipaddress)
+localStorage.setItem("different billing address", JSON.stringify(Differentbillingaddress))
 
 
-// localStorage.setItem("shipiing address", shipaddress.value)
-    localStorage.setItem("Email" , inpvalue)
-    localStorage.setItem("Country",countries)
-    localStorage.setItem("First name",fname)
-    localStorage.setItem("Last name",lname)
-    localStorage.setItem(" Address",address)
-    localStorage.setItem("City",city)
-    localStorage.setItem("Postal code",postalcode)
-    localStorage.setItem("Card Number",cardnum)
-    localStorage.setItem("Card Name",cardname)
-    localStorage.setItem("Month, year",mmyy) 
-    localStorage.setItem("Cvv",cvv) 
-    // localStorage.setItem("Different country",diffcountry) 
-    // localStorage.setItem("First name ",difffname) 
-    // localStorage.setItem("Last name ",difflastname) 
-    // localStorage.setItem("Address",diffinp) 
-    // localStorage.setItem("City",diffcity) 
-    // localStorage.setItem("Postalcode",diffcode) 
-    }
+const box = document.getElementById("mybox");
+box.style.display = 'block'
+
+const dataform = document.getElementById('dataform')
+dataform.reset()
+
+} 
+
+
+function closediv(){
+const box = document.getElementById('mybox')
+box.style.display = 'none'
+}

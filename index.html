@@ -9,10 +9,18 @@
       <script src="https://cdn.tailwindcss.com"></script>
       <link rel="stylesheet" href="style.css">
       <title>Document</title>
+
+
+      
  
    </head>
    <body>
       <div class="main-container">
+
+
+         <div id="mybox"><p>Order completed</p>
+         <p onclick="closediv()" class="cursor-pointer" >Close</p>
+         </div>
       <nav class="pt-[0.5rem] px-[0.5rem]">
          <div class="navbar h-20 bg-[#050824] flex items-center pl-20 ">
             <svg class="" width="171" height="36" viewBox="0 0 171 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,6 +42,9 @@
             </svg>
          </div>
       </nav>
+
+
+
       <div class="child-containers xl:flex">
          <div class="first-child pr-[1.7rem] flex  flex-col pt-16 pl-24 items-center  md:items-start ">
             <div class="checkout-heading  pb-16">
@@ -89,7 +100,7 @@
             <div  class="self-start" >
                <h4 class="text-2xl font-semibold py-5" >Contact Information</h4>
             </div>
-            <form autocomplete="off" >
+            <form id="dataform" autocomplete="off" >
             <div class="email-adress  text-xs m-0 text-[#84849a] bg-white relative -mb-2 ml-9 w-fit self-start ">Email Address</div>
             <div  class="email-input  flex   border-[1.5px] rounded-full border-[#D6D8EE] gap-4 items-center py-4 w-fit pr-2  pl-10 w-full  ">
                <!-- pr-[255px]/   -->

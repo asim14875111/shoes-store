@@ -75,3 +75,9 @@ margin: 10px 0;
     padding-right: 5px;
     padding-top: 5px;
 }
+
+
+.check-box-nd-h6 input {
+background-color: black;
+padding: 50px;
+}

@@ -15,8 +15,6 @@ const countdowninterval = setInterval(() =>{
 
 
 
-
-
 const openBtn = document.getElementById("openModal")
    const closeBtn = document.getElementById( "closeModal")
 const modal = document.getElementById("modal");
@@ -125,8 +123,6 @@ const dataform = document.getElementById('dataform')
 dataform.reset()
 
 } 
-
-
 
 
 function closediv(){

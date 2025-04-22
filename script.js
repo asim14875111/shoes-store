@@ -83,6 +83,8 @@ localStorage.setItem('First name', JSON.stringify(fname));
    }
    localStorage.setItem('Payment method', JSON.stringify(carddata))
 
+   
+
 
   //  Different shipping address
    
@@ -137,16 +139,7 @@ const inpelement = document.getElementById("terms-of-services")
     box.style.display = 'block'
     dataform.reset()
     window.location.href = "page2.html"
-
-
-  }
-
-
-
-
-
-
-} 
+ }} 
 
 
 function closediv(){

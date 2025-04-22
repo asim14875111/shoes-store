@@ -87,3 +87,29 @@ padding: 50px;
 display: flex;
 /* align-items: center; */
 } 
+
+
+
+.product{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+.Order-completed{
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+}
+
+
+.order-heading{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.email-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+

@@ -116,7 +116,7 @@
                      </svg>
                   </div>
                   <div class="w-full" > 
-                     <input name="inp" class="outline-0 w-full font-medium text-black w-[100%]  md:w-full " placeholder="oleo_bone@gmail.com" id="email-inp" type="email" required>
+                     <input pattern="[A-Za-z]"  name="inp" class="outline-0 w-full font-medium text-black w-[100%]  md:w-full " placeholder="oleo_bone@gmail.com" id="email-inp" type="email" required>
                   </div>
                </div>
                <div class="shipping-address  self-start ">
@@ -151,7 +151,7 @@
                               </clipPath>
                            </defs>
                         </svg>
-                        <input name="fname" id="first-name-inp" type="text" placeholder="Oleo" class="outline-0 ">
+                        <input pattern="[A-Za-z]"  name="fname" id="first-name-inp" type="text" placeholder="Oleo" class="outline-0 ">
                      </div>
                   </div>
                   <div>
@@ -169,7 +169,7 @@
                               </clipPath>
                            </defs>
                         </svg>
-                        <input  id="last-name-inp" class="outline-0" type="text" placeholder="Bone">
+                        <input pattern="[A-Za-z]"  id="last-name-inp" class="outline-0" type="text" placeholder="Bone">
                      </div>
                   </div>
                </div>
@@ -207,7 +207,7 @@
                <div class="checkboxes">
                   <div class="checkbox1 flex gap-80 ">
                      <div class="check-box-nd-h6 flex items-center gap-4 ">
-                        <input id="" class="cursor-pointer" type="radio">
+                        <input onclick="storeValue(this.value)" id="" class="cursor-pointer" type="radio" value="Free">
                         <h6 class="font-normal text-[#4b4e68]" >Free shipping</h6>
                      </div>
                      <div>
@@ -216,7 +216,7 @@
                   </div>
                   <div class="checkbox2 flex gap-80 pt-4 ">
                      <div class="check-box-nd-h6 flex items-center gap-4 ">
-                        <input type="radio" class="cursor-pointer">
+                        <input onclick="storeValue(this.value)"  type="radio" value="DHL with price" class="cursor-pointer">
                         <h6 class="font-normal text-[#4b4e68]" >DHL with price</h6>
                      </div>
                      <div>
@@ -280,7 +280,7 @@
                </div>
             </form>
             <div class="terms-of-services flex items-start  w-[570px] gap-3 pt-6">
-               <input id="terms-of-services" type="checkbox">
+               <input class="w-5 h-6" id="terms-of-services" type="checkbox">
                <p class="text-sm text-[#4b4e68] .leading" >By checking this box,I acknowledge that i have read and agree  to the <br> <span class="font-bold text-[#000034]">Terms of Service,</span> and <span class="font-bold text-[#000034]" >Monthly Billing Terms</span> of this website and want to <br> opt-in for the monthly billed Dream Collection Club &reg; </p>
             </div>
             <div class="billing-address self-start">
@@ -289,11 +289,11 @@
             </div>
             <div class="last-check-boxes  pt-6 self-start " >
                <div class="flex gap-5 "  >
-                  <input class="button" id="closeModal" type="radio">
+                  <input value="Same as shipping address" onclick="saveValue(this.value)" class="button" id="closeModal" type="radio">
                   <p  class="font-normal text-[#4b4e68]" >Same as shipping address</p>
                </div>
                <div class="flex gap-5 pt-5 "  >
-                  <input  class="button" id="openModal" type="radio">
+                  <input onclick="saveValue(this.value)" value="Different billing address" class="button" id="openModal" type="radio">
                   <p   class="font-normal text-[#4b4e68]" >Use a different billing address</p>
                </div>
                <div class="modal" id="modal">
@@ -379,7 +379,7 @@
                   </div>
                </div>
                <div class="pt-12 pb-16">
-                  <button id="savedata" onclick="savedata()" class="bg-[#050824] text-white flex items-center px-10 gap-1 text-lg font-semibold rounded-full py-3.5 hover:bg-[#323b8f] " >
+                  <button id="savedata" onclick="savedata()" class="bg-[#050824] text-white flex items-center px-10 gap-1 text-lg font-semibold rounded-full py-3.5 hover:bg-[#323b8f]">
                      Complete Order 
                      <svg  width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M23.124 4.87897L18.538 0.292969L17.124 1.70697L21.386 5.96997L0 5.99997V7.99997L21.446 7.96997L17.123 12.293L18.537 13.707L23.124 9.12097C23.6847 8.55748 23.9995 7.79489 23.9995 6.99997C23.9995 6.20504 23.6847 5.44246 23.124 4.87897Z" fill="white"></path>

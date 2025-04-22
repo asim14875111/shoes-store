@@ -63,6 +63,8 @@ const data = {
   Postalcode : postalcode,
 };
 localStorage.setItem('Shipping Address', JSON.stringify(data));
+localStorage.setItem('First name', JSON.stringify(fname));
+
 
 
 
@@ -79,8 +81,7 @@ localStorage.setItem('Shipping Address', JSON.stringify(data));
     Monthyear : mmyy,
     Cvv : cvv,
    }
-   localStorage.setItem
-   ("Payment method",JSON.stringify(carddata))
+   localStorage.setItem('Payment method', JSON.stringify(carddata))
 
 
   //  Different shipping address
@@ -113,10 +114,12 @@ if( email == ''  || email == null){
   alert("kindly fill the form!")
   return false
 }
-// else{
-//   box.style.display = 'block'
+else{
+  // box.style.display = 'block'
+  // window.location.href = "page2.html"
 
-// }
+
+}
 
 // Reseting inputs after completing the order
 
@@ -133,9 +136,13 @@ const inpelement = document.getElementById("terms-of-services")
   }else{
     box.style.display = 'block'
     dataform.reset()
+    window.location.href = "page2.html"
 
 
   }
+
+
+
 
 
 
@@ -149,4 +156,17 @@ box.style.display = 'none'
 
 
 
+
+
+
+function storeValue(value){
+  localStorage.setItem("Shipping", value)
+
+}
+
+
+function saveValue(value){
+  localStorage.setItem("Billing address", value)
+
+}
 

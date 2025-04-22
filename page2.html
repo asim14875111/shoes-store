@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="images/icons8-done-100.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Order completed</title>
+    <style>
+
+body{
+    background-image: url("images/b6ef790f4b0c9ee2ba799c6ebe7e4589.jpg");
+background-position: center;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    opacity: 500px;
+    font-family: 'Courier New', Courier, monospace,sans-serif;
+    /* color: white; */
+}
+
+    </style>
+</head>
+<body>
+    
+
+
+    <h1  class="Order-completed  text-4xl flex items-center justify-self-center py-4 text-gray-800  text-white font-semibold" >Order completed
+        <!-- <img src="images/icons8-purchase-order-100.png" alt=""> -->
+
+    </h1>
+
+    <div>
+        <h2  class="text-2xl pl-12 font-semibold text-white pt-4  " >Thankyou <span id="name"></span> Your order has been received!</h2>
+    </div>
+
+
+    <div class="order-details p-14 text-white " >
+<h1  class="font-medium order-heading text-3xl pb-4" >Order Details;</h1>
+
+<div class="product  border-b pb-2">
+    <h5 class="font-semibold">PRODUCT</h5>
+    <h5 class="font-semibold">TOTAL</h5>
+</div>
+
+
+<div class=" flex justify-between items-center border-b pb-4 pt-4">
+    <h5 class="font-medium  flex items-center gap-2">
+        <img class="w-12" src="images/second-shoe.png" alt="">
+        Nike Sneakers </h5>
+    <h5 class="font-medium">$120.90</h5>
+</div>
+
+
+<div class=" flex justify-between border-b pb-4 pt-4">
+    <h5 class="font-medium">Sub Total :</h5>
+    <h5 class="font-medium">$362.70</h5>
+</div>
+
+<div class=" flex justify-between border-b pb-4 pt-4">
+    <h5 class="font-medium">Shipping : </h5>
+    <h5 id="shipping" class="font-medium"></h5>
+</div>
+<div class=" flex justify-between border-b pb-4 pt-4">
+    <h5 class="font-medium">Billing Address </h5>
+    <h5 id="billingaddress" class="font-medium"></h5>
+</div>
+<div class=" flex justify-between border-b pb-4 pt-4">
+    <h5 class="font-medium">Payment method : </h5>
+    <h5 class="font-medium">Card</h5>
+</div>
+<div class=" flex justify-between border-b pb-4 pt-4 ">
+    <h5 class="font-bold "> Total : </h5>
+    <h5 class="font-bold">$362.70</h5>
+</div>
+
+
+
+    </div>
+
+
+    <div class="user-data flex flex-col gap-4 m-10 p-4 dotted-border border-2  rounded border-white border-dotted  bg-opacity-20 text-white  bg-[#f7faff] ">
+
+    <h1 class="text-3xl font-semibold  border-b-2 border-white w-fit " >Customer Details:</h1>
+    <p class="email-entry" id="displayData">
+    </p>
+    <p id="displayData2"></p>
+    <p id="displayData3"></p>
+    <p id="displayData4"></p>
+</div>
+
+
+
+    <script>
+
+
+
+const savedValue = localStorage.getItem("Email");
+
+ document.getElementById("displayData").innerHTML = "- Email  address:" + '<br>' + savedValue;
+
+
+
+
+const shippingaddress = localStorage.getItem('Shipping Address')
+document.getElementById("displayData2").innerHTML = 
+"- Shipping Address: " + '<br>' + shippingaddress;
+
+const obj = JSON.parse(shippingaddress);
+console.log(obj)
+
+
+const paymentmethod = localStorage.getItem("Payment method")
+document.getElementById("displayData3").innerHTML =
+"- Card Details: " + '<br>' +  paymentmethod   ;
+
+const differentaddress = localStorage.getItem("different billing address")
+document.getElementById("displayData4").innerHTML =
+"- Different billing Address: " + '<br>' + differentaddress;
+
+
+window.onload = function(){
+    const storedvalue = localStorage.getItem('Shipping')
+    const savedvalue = localStorage.getItem('Billing address')
+    if(storedvalue){
+        document.getElementById('shipping').textContent = storedvalue;
+    }
+    if(savedvalue){
+        document.getElementById('billingaddress').textContent = savedvalue
+    }
+
+
+
+    const name = localStorage.getItem('First name')
+document.getElementById('name').textContent = name
+}
+
+
+
+
+
+
+  </script> 
+
+</body>
+</html>

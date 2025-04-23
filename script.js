@@ -10,14 +10,17 @@ const countdowninterval = setInterval(() => {
    if (timeleft <= 0) {
       clearInterval(countdowninterval);
       alert("time's up!")
-   }
+   };
 }, 1000)
 
 
-const openBtn = document.getElementById("openModal")
-const closeBtn = document.getElementById("closeModal")
+const openBtn = document.querySelectorAll("#openModal")
+const closeBtn = document.querySelectorAll("#closeModal")
 const modal = document.getElementById("modal");
-openBtn.addEventListener("click", () => {
+
+openBtn.forEach(openModal =>{
+
+   openModal.addEventListener("click", () => {
    modal.classList.add("open");
 
    const element = document.getElementById("modal")
@@ -27,14 +30,18 @@ openBtn.addEventListener("click", () => {
 
    }
 })
-
-closeBtn.addEventListener("click", () => {
-   const element = document.getElementById("modal")
-
-   element.style.marginTop = "0px"
-   element.style.marginBottom = "0px"
-   modal.classList.remove("open");
 })
+closeBtn.forEach(closeModal =>{
+   closeModal.addEventListener("click", () => {
+      const element = document.getElementById("modal")
+   
+      element.style.marginTop = "0px"
+      element.style.marginBottom = "0px"
+      modal.classList.remove("open");
+   })
+   
+})
+
 
 function savedata() {
 
@@ -81,6 +88,7 @@ function savedata() {
    localStorage.setItem('Payment method', JSON.stringify(carddata))
 
 
+ 
    //  Different shipping address
 
    const diffcountry = document.getElementById("diff-country").value
@@ -135,6 +143,19 @@ function savedata() {
    }
 }
 
+function togglechckbox(){
+   var checkbox = document.getElementById('freeshippinginp')
+   checkbox.checked = !checkbox.checked
+
+}
+
+function checkthisbox(){
+   var checkbox = document.getElementById('closeModal')
+   checkbox.checked = !checkbox.checked
+   
+   }
+   
+   
 
 function closediv() {
    const box = document.getElementById('mybox')
@@ -143,7 +164,7 @@ function closediv() {
 
 
 function storeValue(value) {
-   localStorage.setItem("Shipping", value)
+  localStorage.setItem("Shipping", value)
 
 }
 
@@ -157,3 +178,36 @@ function saveValue(value) {
 function allowalphabetsonly(inputField){
   inputField.value = inputField.value.replace(/[^a-zA-Z]/g, '')
 }
+
+
+function allowslash(inputElement){
+  inputElement.addEventListener('input', function(){
+    this.value = this.value.replace(/[^0-9/]/g, '');
+  })
+}
+
+const inputfield = document.getElementById('mm-yy');
+if(inputfield){
+  allowslash(inputfield)
+
+}
+
+
+function togglecheckbox(){
+var checkbox = document.getElementById('dhlpriceinp')
+checkbox.checked = !checkbox.checked
+
+}
+
+
+
+
+
+function checkthebox(){
+var checkbox = document.getElementById('openModal')
+checkbox.checked = !checkbox.checked
+
+}
+
+
+

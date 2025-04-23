@@ -212,8 +212,8 @@
                <div class="checkboxes">
                   <div class="checkbox1 flex gap-80 ">
                      <div class="check-box-nd-h6 flex items-center gap-4 ">
-                        <input onclick="storeValue(this.value)" id="" class="cursor-pointer" type="radio" value="Free">
-                        <h6 class="font-normal text-[#4b4e68]" >Free shipping</h6>
+                        <input onclick="storeValue(this.value)" id="freeshippinginp" class="cursor-pointer freeship" type="radio" value="Free">
+                 <span class="font-normal cursor-pointer text-[#4b4e68]"  id="checkboxValue" id="checkboxvalue" onclick="storeValue(freeshippinginp.value),togglechckbox()">Free shipping</span>
                      </div>
                      <div>
                         <h6>$10</h6>
@@ -221,8 +221,10 @@
                   </div>
                   <div class="checkbox2 flex gap-80 pt-4 ">
                      <div class="check-box-nd-h6 flex items-center gap-4 ">
-                        <input onclick="storeValue(this.value)"  type="radio" value="DHL with price" class="cursor-pointer">
-                        <h6 class="font-normal text-[#4b4e68]" >DHL with price</h6>
+                        <input id="dhlpriceinp" onclick="storeValue(this.value)"  type="radio" value="DHL with price" class="cursor-pointer">
+                        <span  onclick="storeValue(dhlpriceinp.value),togglecheckbox(this) " class="font-normal cursor-pointer text-[#4b4e68]"  id="checkboxValue">DHL with price</span>
+                        <!-- <h6  onclick="togglecheckbox(this)" class="font-normal text-[#4b4e68]" >DHL with price</h6> -->
+                        <!-- <p id="valuedisplayed" ></p> -->
                      </div>
                      <div>
                         <h6>$20</h6>
@@ -275,7 +277,9 @@
                <div class="names-input flex gap-5 pt-6 ">
                   <div>
                      <div  class="inp-div  pr-[12.5px]  flex gap-4 pl-[2.6rem] py-3 rounded-full font-medium border border-[#D6D8EE]">
-                        <input onkeypress="if(this.value.length===7) return false"   type="number" id="mm-yy" placeholder="MM/YY" class="outline-0 w-11/12" required>
+                        <input pattern="[^1-9-/]"
+                        onclick="allowslash()" 
+                        onkeypress="if(this.value.length===7) return false"   type="tel" id="mm-yy" placeholder="MM/YY" class="outline-0 w-11/12" required>
                      </div>
                   </div>
                   <div>
@@ -295,12 +299,15 @@
             </div>
             <div class="last-check-boxes  pt-6 self-start " >
                <div class="flex gap-5 "  >
-                  <input value="Same as shipping address" onclick="saveValue(this.value)" class="button" id="closeModal" type="radio">
-                  <p  class="font-normal text-[#4b4e68]" >Same as shipping address</p>
+                  <input value="Same as shipping address" onclick="saveValue(this.value)" class="button" id="closeModal"  type="radio">
+               <span onclick="saveValue(closeModal.value),checkthisbox()"  class="font-normal cursor-pointer text-[#4b4e68]" id="closeModal" >Same as shipping address</span>
+               
+                  <!-- <p  class="font-normal text-[#4b4e68]" >Same as shipping address</p> -->
                </div>
                <div class="flex gap-5 pt-5 "  >
                   <input onclick="saveValue(this.value)" value="Different billing address" class="button" id="openModal" type="radio">
-                  <p   class="font-normal text-[#4b4e68]" >Use a different billing address</p>
+                  <span id="openModal"  onclick="checkthebox()"  class="font-normal cursor-pointer text-[#4b4e68]" >Use a different billing address</span>
+                  <!-- <p    >Use a different billing address</p> -->
                </div>
                <div class="modal" id="modal">
                   <div class="modal-inner w-full ">
@@ -355,7 +362,7 @@
                            </div>
                         </div>
                      </div>
-                     <div  class="adress w-fit pr-[260px] flex gap-3 mt-9 font-medium py-3 pl-10 border border-[#D6D8EE] rounded-full w-full sm:w-auto ">
+                     <div  class="adress w-fit pr-[260px] flex gap-3 mt-9 font-medium py-3 pl-10 border border-[#D6D8EE] rounded-full w-full sm:w-auto">
                         <div class="camera-img">
                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <g clip-path="url(#clip0_376_1728)">
@@ -378,7 +385,7 @@
                         </div>
                         <div>
                            <div class="inp-div flex gap-4 pl-[2.26rem] py-3 rounded-full font-medium border border-[#D6D8EE] w-12/12  pr-[18px]" >
-                              <input  onkeypress="if(this.value.length===10) return false"   id="diff-code"  class="outline-0  w-11/12" type="number" placeholder="Postal Code" required>
+                              <input  onkeypress="if(this.value.length===10) return false"    id="diff-code"  class="outline-0  w-11/12" type="tel" placeholder="Postal Code" required>
                            </div>
                         </div>
                      </div>

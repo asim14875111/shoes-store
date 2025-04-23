@@ -152,3 +152,8 @@ function saveValue(value) {
    localStorage.setItem("Billing address", value)
 
 } 
+
+
+function allowalphabetsonly(inputField){
+  inputField.value = inputField.value.replace(/[^a-zA-Z]/g, '')
+}

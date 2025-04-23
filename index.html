@@ -156,7 +156,7 @@
                               </clipPath>
                            </defs>
                         </svg>
-                        <input pattern="[A-Za-z]"  name="fname" id="first-name-inp" type="text" placeholder="Oleo" class="outline-0 ">
+                        <input oninput="allowalphabetsonly(this)" pattern="[A-Za-z]"  name="fname" id="first-name-inp" type="text" placeholder="Oleo" class="outline-0 ">
                      </div>
                   </div>
                   <div>
@@ -174,7 +174,7 @@
                               </clipPath>
                            </defs>
                         </svg>
-                        <input pattern="[A-Za-z]"  id="last-name-inp" class="outline-0" type="text" placeholder="Bone">
+                        <input oninput="allowalphabetsonly(this)" pattern="[A-Za-z]"  id="last-name-inp" class="outline-0" type="text" placeholder="Bone">
                      </div>
                   </div>
                </div>
@@ -197,12 +197,12 @@
                <div class="names-input  gap-5 pt-6 w-full  flex flex-col sm:w-auto sm:flex  sm:flex-row ">
                   <div>
                      <div class="inp-div   flex gap-4 pl-[2.26rem] py-3 rounded-full pr-[18px] font-medium border border-[#D6D8EE]">
-                        <input id="city" type="text" placeholder="City" class="outline-0 w-11/12">
+                        <input oninput="allowalphabetsonly(this)" id="city" type="text" placeholder="City" class="outline-0 w-11/12">
                      </div>
                   </div>
                   <div>
                      <div class="inp-div flex gap-4 pl-[2.26rem] py-3 rounded-full font-medium border border-[#D6D8EE] w-12/12  pr-[18px]" >
-                        <input  id="postalcode"  class="outline-0  w-11/12" type="text" placeholder="Postal Code" required >
+                        <input onkeypress="if(this.value.length===10) return false"  id="postalcode"  class="outline-0  w-11/12" type="number" placeholder="Postal Code" required >
                      </div>
                   </div>
                </div>
@@ -250,7 +250,7 @@
                         </defs>
                      </svg>
                   </div>
-                  <div class="w-full" ><input pattern="[0-9]"  maxlength="12" id="card-num" class="outline-0 font-medium w-full text-black" placeholder="2587 9860 2354" type="text" required>
+                  <div class="w-full" ><input pattern="[0-9]"  maxlength="12" id="card-num" class="outline-0 font-medium w-full text-black" placeholder="2587 9860 2354" type="number" onkeypress="if(this.value.length===12) return false" required>
                   </div>
                </div>
                <!-- pr-[255px] -->
@@ -268,18 +268,19 @@
                         </defs>
                      </svg>
                   </div >
-                  <div class="w-full" >   <input  id="card-name" class="outline-0 font-medium w-full text-black" placeholder="Name on Card" type="text">
+                  <div class="w-full" > 
+                  <input  oninput="allowalphabetsonly(this)" id="card-name" class="outline-0 font-medium w-full text-black" placeholder="Name on Card" type="text">
                   </div>
                </div>
                <div class="names-input flex gap-5 pt-6 ">
                   <div>
                      <div  class="inp-div  pr-[12.5px]  flex gap-4 pl-[2.6rem] py-3 rounded-full font-medium border border-[#D6D8EE]">
-                        <input  type="" id="mm-yy" placeholder="MM/YY" class="outline-0 w-11/12" required>
+                        <input onkeypress="if(this.value.length===7) return false"   type="number" id="mm-yy" placeholder="MM/YY" class="outline-0 w-11/12" required>
                      </div>
                   </div>
                   <div>
                      <div  class="inp-div flex gap-4 pr-[12.5px] pl-[2.6rem] py-3 rounded-full font-medium border border-[#D6D8EE] w-12/12">
-                        <input  id="cvv"  maxlength="3" class="outline-0  w-12/12" type="text" placeholder=" CVV" required>
+                        <input  onkeypress="if(this.value.length===3) return false"  id="cvv"  maxlength="3" class="outline-0  w-12/12" type="number" placeholder=" CVV" required>
                      </div>
                   </div>
                </div>
@@ -332,7 +333,7 @@
                                     </clipPath>
                                  </defs>
                               </svg>
-                              <input id="diff-fname" type="text" placeholder="Oleo" class="outline-0 ">
+                              <input oninput="allowalphabetsonly(this)" id="diff-fname" type="text" placeholder="Oleo" class="outline-0 ">
                            </div>
                         </div>
                         <div>
@@ -350,7 +351,7 @@
                                     </clipPath>
                                  </defs>
                               </svg>
-                              <input id="diff-lname"  class="outline-0" type="text" placeholder="Bone" required>
+                              <input oninput="allowalphabetsonly(this)" id="diff-lname"  class="outline-0" type="text" placeholder="Bone" required>
                            </div>
                         </div>
                      </div>
@@ -372,12 +373,12 @@
                      <div class="names-input  gap-5 pt-6 w-full  flex flex-col sm:w-auto sm:flex  sm:flex-row ">
                         <div>
                            <div class="inp-div   flex gap-4 pl-[2.26rem] py-3 rounded-full pr-[18px] font-medium border border-[#D6D8EE]">
-                              <input id="diff-city" type="text" placeholder="City" class="outline-0 w-11/12">
+                              <input oninput="allowalphabetsonly(this)" id="diff-city" type="text" placeholder="City" class="outline-0 w-11/12">
                            </div>
                         </div>
                         <div>
                            <div class="inp-div flex gap-4 pl-[2.26rem] py-3 rounded-full font-medium border border-[#D6D8EE] w-12/12  pr-[18px]" >
-                              <input id="diff-code"  class="outline-0  w-11/12" type="text" placeholder="Postal Code" required>
+                              <input  onkeypress="if(this.value.length===10) return false"   id="diff-code"  class="outline-0  w-11/12" type="number" placeholder="Postal Code" required>
                            </div>
                         </div>
                      </div>

@@ -19,7 +19,7 @@
          }
       </style>
    </head>
-   <body>
+   <body  class="bg-[#f3f3f3a6]" >
       <nav class="pt-[0.5rem] px-[0.5rem]">
          <div class="navbar h-20 bg-[#050824] flex items-center pl-24 ">
             <svg class="" width="171" height="36" viewBox="0 0 171 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,7 +86,7 @@
                <h5 class="font-bold">$362.70</h5>
             </div>
          </div>
-         <div class="child-box-2 border-t-0 border-black user-data flex flex-col gap-4 w-7/12 pt-5 pr-0 mr-2 bg-[#d5d6d2]   h-full border ">
+         <div class="child-box-2 border-t-0 border-black user-data flex flex-col gap-4 w-7/12 pt-5 pr-0 mr-2 bg-[#e7e7e77a]   h-full border ">
             <div class=" rounded  w-full   " >
                <h1 class="text-2xl justify-self-center font-medium  text-3xl flex items-center  w-fit order-detail font-semibold text-gray-700  pb-3  w-full justify-center border-b border-black "> <img class="w-12" src="images/icons8-order-80.png" alt="">Order Details</h1>
                <div class="main-div flex-flex-col justify-self-center  w-full justify-center  items-start" >
@@ -99,8 +99,8 @@
                      </div>
                      <div class=" pl-6 pt-4 " >
                          <p class=" pb-2 font-semibold" >
-                             <span class="mb-10">Payment method</span> 
-                            <span class="font-normal" id="displayData3"></span></p>
+                            Payment method
+                            <p class="font-normal -mt-6" id="displayData3"></p></p>
                          <p  class=" pb-2 h-fit font-semibold">Billing Address
                             <span id="displayData4" class="font-normal"  ></span>
                          </p>
@@ -116,7 +116,10 @@
          </div>
       </div>
       <div class="flex justify-self-center pt-10" >  
-         <a class=" bg-black hover:bg-[#2b2b2b] py-3 rounded px-3 text-white" href="index.html">Continue Shopping</a> 
+         <a class=" flex  hover:pl-6 transition-all items-center gap-2 bg-black hover:bg-[#2b2b2b] py-3 rounded px-3 text-white" href="index.html"
+         >
+        <img class="w-8 h-8   hover:transition-all " src="images/icons8-cart-40.png" alt="">
+         Continue Shopping</a> 
       </div>
       <script>
          const savedValue = localStorage.getItem("Email");

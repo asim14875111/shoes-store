@@ -61,6 +61,8 @@
             <div class=" flex justify-between items-center  pb-2 pt-2">
                <h5 class="font-medium  flex items-center gap-2">
                   <img class="w-12" src="images/second-shoe.png" alt="">
+                  <p     id="counter2nd-pg" class="bg-gray-700 py-[1px] cursor-pointer text-white  absolute left-[92px] top-[217px]  text-[8px]  rounded-full 
+                  px-[5px]">1</p>
                   Nike Sneakers 
                </h5>
                <h5 class="font-medium">
@@ -231,6 +233,11 @@
          }
          
          
+                  
+    const quantity =  localStorage.getItem("Quantity");
+
+         document.getElementById("counter2nd-pg")
+         .textContent = quantity
          
          
          

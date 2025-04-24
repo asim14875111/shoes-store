@@ -231,8 +231,9 @@ const subtotal =   document.getElementById('subtotal').textContent =
 
  localStorage.setItem("Subtotal",subtotal)
 
+const Quantity = document.getElementById("counter").innerHTML
 
-
+localStorage.setItem("Quantity",Quantity )
 
 //  const total = document.getElementById("toal")
 

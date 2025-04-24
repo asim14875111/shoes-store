@@ -41,10 +41,7 @@
             </svg>
          </div>
       </nav>
-             
       <div class="boxes flex flex-col   ">
- 
-    
          <div class="child-box-1 order-details p-10   w-full h-5/12 p-14 pt-6 pb-0">
             <div class="pb-4" >
                <h2  class="text-3xl flex  gap-2 items-center  font-semibold  pb-2">
@@ -57,7 +54,6 @@
                </h2>
             </div>
             <!-- <h1  class="font-medium order-heading text-3xl pb-4" >Order Details;</h1> -->
-    
             <div class="product  border-b pb-2 ">
                <h5 class="font-semibold">PRODUCT</h5>
                <h5 class="font-semibold">TOTAL</h5>
@@ -90,50 +86,49 @@
                <h5 class="font-bold">$362.70</h5>
             </div>
          </div>
-   <div class="child-box-2  user-data flex flex-row  self-center  gap-20 w-full pt-5 pr-0 mr-2 justify-center  mt-4 mb-8   w-0/12  h-full  ">
-           <div>
-            <div class=" rounded   border w-fit justify-self-center self-center " >
-               <h1 class="text-2xl border-b pt-4 justify-self-center font-medium  text-xl flex items-center  w-fit order-detail font-semibold text-gray-700  pb-3  w-full  "> <img class="w-8" src="images/icons8-order-80.png" alt="">Order Details</h1>
-               <div class="main-div flex-flex-col justify-self-center  w-full justify-center  items-start" >
-                  <div class="flex" >
-                     <div class="pr-12 pl-10 pt-4 border-black " >
-                        <p class="email-entry font-semibold flex flex-col  gap-0 font-medium pb-2 ">
-                           Contact Information <br> <span class="font-normal" id="displayData"></span>
-                        </p>
-                        <p class="font-semibold">Shipping Address<span class="font-normal"  id="displayData2"></span></p>
+         <div class="child-box-2  user-data flex flex-col  lg:flex lg:flex-row items-center lg:items-start  self-center  gap-20 w-full pt-5 pr-0 mr-2 justify-center  mt-4 mb-8   w-0/12  h-full  ">
+            <div>
+               <div class=" rounded   border w-fit justify-self-center self-center " >
+                  <h1 class="text-2xl border-b pl-9 pt-4 justify-self-center font-medium  text-xl flex items-center  w-fit order-detail font-semibold text-gray-800  pb-3  w-full  "> <img class="w-8" src="images/icons8-order-80.png" alt="">Order Details</h1>
+                  <div class="main-div flex-flex-col justify-self-center  w-full justify-center  items-start" >
+                     <div class="flex" >
+                        <div class="pr-12 pl-10 pt-4 border-black " >
+                           <p class="email-entry font-semibold flex flex-col  gap-0 font-medium pb-2 ">
+                              Contact Information <br> <span class="font-normal" id="displayData"></span>
+                           </p>
+                           <p class="font-semibold">Shipping Address<span class="font-normal"  id="displayData2"></span></p>
+                        </div>
+                        <div class=" pl-6 pt-4 pr-10 " >
+                           <p class=" pb-2 font-semibold" >
+                              Payment method
+                           <p class="font-normal -mt-6" id="displayData3"></p>
+                           </p>
+                           <p  class=" pb-2 h-fit font-semibold">Billing Address
+                              <span id="displayData4" class="font-normal"  ></span>
+                           </p>
+                        </div>
                      </div>
-                     <div class=" pl-6 pt-4 pr-6 " >
-                         <p class=" pb-2 font-semibold" >
-                            Payment method
-                            <p class="font-normal -mt-6" id="displayData3"></p></p>
-                         <p  class=" pb-2 h-fit font-semibold">Billing Address
-                            <span id="displayData4" class="font-normal"  ></span>
-                         </p>
+                     <div class=" mt-8 pt-4 px-2 pb-4 border-t border-black flex justify-between "
+                        >
+                        <h4>Need help?</h4>
+                        <a  class=" text-blue-800 underline cursor-pointer" >Contact us</a>
                      </div>
-                  </div>
-                  <div class=" mt-8 pt-4 px-2 pb-4 border-t border-black flex justify-between "
-                     >
-                     <h4>Need help?</h4>
-                     <a  class=" text-blue-800 underline cursor-pointer" >Contact us</a>
                   </div>
                </div>
             </div>
-
-         </div>
             <div class="border">
-            <img class="h-40" src="images/Capture.PNG" alt="">
-            <p class="font-semibold py-4 pl-2" >Your order is confirmed</p>
-            <p  class="pl-2">You'll receive a confirmation email  with your order <br> number shortly.</p>
-            <div class="flex  pl-2 mt-10 pt-10" >  
-               <a class=" flex  hover:pl-6 transition-all items-center gap-2 bg-black hover:bg-[#2b2b2b] py-3 rounded px-3 text-white" href="index.html"
-               >
-              <img class="w-8 h-8   hover:transition-all " src="images/icons8-cart-40.png" alt="">
-               Continue Shopping</a> 
+               <img class="h-40" src="images/Capture.PNG" alt="">
+               <p class="font-semibold py-4 pl-2" >Your order is confirmed</p>
+               <p  class="pl-2">You'll receive a confirmation email  with your order <br> number shortly.</p>
+               <div class="flex  pl-2 mt-10 pt-10 pb-[70px]" >  
+                  <a class=" flex  hover:pl-6 transition-all items-center gap-2 bg-black hover:bg-[#2b2b2b] py-3 rounded px-3 text-white" href="index.html"
+                     >
+                  <img class="w-8 h-8   hover:transition-all " src="images/icons8-cart-40.png" alt="">
+                  Continue Shopping</a> 
+               </div>
             </div>
-            </div>
-         </div> 
+         </div>
       </div>
-   
       <script>
          const savedValue = localStorage.getItem("Email");
          

@@ -18,28 +18,28 @@ const openBtn = document.querySelectorAll("#openModal")
 const closeBtn = document.querySelectorAll("#closeModal")
 const modal = document.getElementById("modal");
 
-openBtn.forEach(openModal =>{
+openBtn.forEach(openModal => {
 
    openModal.addEventListener("click", () => {
-   modal.classList.add("open");
+      modal.classList.add("open");
 
-   const element = document.getElementById("modal")
-   element.style.marginTop = "120px"
-   element.style.marginBottom = "150px"
-   if (modal.classList.add("open")) {
+      const element = document.getElementById("modal")
+      element.style.marginTop = "120px"
+      element.style.marginBottom = "150px"
+      if (modal.classList.add("open")) {
 
-   }
+      }
+   })
 })
-})
-closeBtn.forEach(closeModal =>{
+closeBtn.forEach(closeModal => {
    closeModal.addEventListener("click", () => {
       const element = document.getElementById("modal")
-   
+
       element.style.marginTop = "0px"
       element.style.marginBottom = "0px"
       modal.classList.remove("open");
    })
-   
+
 })
 
 
@@ -88,7 +88,6 @@ function savedata() {
    localStorage.setItem('Payment method', JSON.stringify(carddata))
 
 
- 
    //  Different shipping address
 
    const diffcountry = document.getElementById("diff-country").value
@@ -143,19 +142,18 @@ function savedata() {
    }
 }
 
-function togglechckbox(){
+function togglechckbox() {
    var checkbox = document.getElementById('freeshippinginp')
    checkbox.checked = !checkbox.checked
 
 }
 
-function checkthisbox(){
+function checkthisbox() {
    var checkbox = document.getElementById('closeModal')
    checkbox.checked = !checkbox.checked
-   
-   }
-   
-   
+
+}
+
 
 function closediv() {
    const box = document.getElementById('mybox')
@@ -164,7 +162,7 @@ function closediv() {
 
 
 function storeValue(value) {
-  localStorage.setItem("Shipping", value)
+   localStorage.setItem("Shipping", value)
 
 }
 
@@ -172,42 +170,36 @@ function storeValue(value) {
 function saveValue(value) {
    localStorage.setItem("Billing address", value)
 
-} 
-
-
-function allowalphabetsonly(inputField){
-  inputField.value = inputField.value.replace(/[^a-zA-Z]/g, '')
 }
 
 
-function allowslash(inputElement){
-  inputElement.addEventListener('input', function(){
-    this.value = this.value.replace(/[^0-9/]/g, '');
-  })
+function allowalphabetsonly(inputField) {
+   inputField.value = inputField.value.replace(/[^a-zA-Z]/g, '')
+}
+
+
+function allowslash(inputElement) {
+   inputElement.addEventListener('input', function () {
+      this.value = this.value.replace(/[^0-9/]/g, '');
+   })
 }
 
 const inputfield = document.getElementById('mm-yy');
-if(inputfield){
-  allowslash(inputfield)
+if (inputfield) {
+   allowslash(inputfield)
 
 }
 
 
-function togglecheckbox(){
-var checkbox = document.getElementById('dhlpriceinp')
-checkbox.checked = !checkbox.checked
+function togglecheckbox() {
+   var checkbox = document.getElementById('dhlpriceinp')
+   checkbox.checked = !checkbox.checked
 
 }
 
 
-
-
-
-function checkthebox(){
-var checkbox = document.getElementById('openModal')
-checkbox.checked = !checkbox.checked
+function checkthebox() {
+   var checkbox = document.getElementById('openModal')
+   checkbox.checked = !checkbox.checked
 
 }
-
-
-

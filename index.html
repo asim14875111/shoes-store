@@ -121,7 +121,7 @@
                      </svg>
                   </div>
                   <div class="w-full" > 
-                     <input pattern="[A-Za-z]"  name="inp" class="outline-0 w-full font-medium text-black w-[100%]  md:w-full " placeholder="oleo_bone@gmail.com" id="email-inp" type="email" required>
+                     <input oninput="allowalphabetsandnumbers(this)" pattern="[A-Za-z]"  name="inp" class="outline-0 w-full font-medium text-black w-[100%]  md:w-full " placeholder="oleo_bone@gmail.com" id="email-inp" type="email" required>
                   </div>
                </div>
                <div class="shipping-address  self-start ">
@@ -407,7 +407,8 @@
                   <p  onclick="addone()"  id="counter" class="bg-gray-700 cursor-pointer text-white  -ml-[39px] -mt-[54px] text-xs rounded-full px-2 py-[1.1px]" >1</p>
                   <h6>Nike Sneakers</h6>
                </div>
-               <h5 class="flex pt-8" >$<span id="120$">120</span>
+               <h5 class="flex pt-8">
+                  $<span id="120$">120</span>
                   <span>.90</span>
 
                </h5>

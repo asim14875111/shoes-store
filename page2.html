@@ -63,17 +63,29 @@
                   <img class="w-12" src="images/second-shoe.png" alt="">
                   Nike Sneakers 
                </h5>
-               <h5 class="font-medium">$120.90</h5>
+               <h5 class="font-medium">
+                  
+                  <span>$</span>
+                  <span  id="price">120</span>
+                  
+                  
+                  <span>  .90</span>
+                  
+                </h5>
             </div>
             <div class=" flex justify-between  pb-2 pt-2">
                <h5 class="font-medium">Sub Total :</h5>
-               <h5 class="font-medium">$120.90</h5>
+               <h5  class="font-medium">
+<span>$</span>
+<span id="Subtotal">120</span>
+<span>.90</span>
+               </h5>
             </div>
             <div class=" flex justify-between - pb-2 pt-2">
                <h5 class="font-medium">Shipping : </h5>
                <h5 id="shipping" class="font-medium"></h5>
             </div>
-            <div class=" flex justify-between - pb-2 pt-2">
+            <div class=" flex justify-between  pb-2 pt-2">
                <h5 class="font-medium">Billing Address </h5>
                <h5 id="billingaddress" class="font-medium"></h5>
             </div>
@@ -83,10 +95,16 @@
             </div>
             <div class=" flex justify-between border-t-2 pb-4 pt-4 ">
                <h5 class="font-bold "> Total : </h5>
-               <h5 class="font-bold">$120.90</h5>
+               <h5  class="font-bold">
+
+                  <span>$</span>
+                  <span id="total">120</span>
+                  <span>.90</span>
+
+               </h5>
             </div>
          </div>
-         <div class="child-box-2  user-data flex flex-col  lg:flex lg:flex-row items-center lg:items-start  self-center  gap-20 w-full pt-5 pr-0 mr-2 justify-center  mt-4 mb-8   w-0/12  h-full  ">
+         <div class="child-box-2 p-6 md:p-0 user-data flex flex-col  lg:flex lg:flex-row items-center lg:items-start  self-center  gap-20 w-full pt-5 md:pr-0 mr-2 justify-center  mt-4 mb-8   w-0/12  h-full  ">
             <div>
                <div class=" rounded   border w-fit justify-self-center self-center " >
                   <h1 class="text-2xl border-b pl-9 pt-4 justify-self-center font-medium  text-xl flex items-center  w-fit order-detail font-semibold text-gray-800  pb-3  w-full  "> <img class="w-8" src="images/icons8-order-80.png" alt="">Order Details</h1>
@@ -99,9 +117,9 @@
                            <p class="font-semibold">Shipping Address<span class="font-normal"  id="displayData2"></span></p>
                         </div>
                         <div class=" pl-6 pt-4 pr-10 " >
-                           <p class=" pb-2 font-semibold" >
+                           <p class=" pb-1 font-semibold" >
                               Payment method
-                           <p class="font-normal -mt-6" id="displayData3"></p>
+                           <p class="font-normal pb-2 -mt-6" id="displayData3"></p>
                            </p>
                            <p  class=" pb-2 h-fit font-semibold">Billing Address
                               <span id="displayData4" class="font-normal"  ></span>
@@ -134,10 +152,42 @@
          
           document.getElementById("displayData").innerHTML =  savedValue;
          
+          const price = localStorage.getItem("Price")
+       
+       if(price){
+          document.getElementById("price").innerHTML = 
+          price
+       }else{
+
+         document.getElementById("price").innerHTML = 
+      '120'
+
+       }
          
          const shippingaddress = localStorage.getItem('Shipping Address')
          
          
+         const subtotal = localStorage.getItem('Subtotal')
+         
+         if(subtotal){
+            
+            document.getElementById("Subtotal").innerHTML = subtotal
+         }
+         else{
+            document.getElementById("Subtotal").innerHTML = '120'
+         }
+
+         const total = localStorage.getItem('Total')
+
+         if(total){
+            document.getElementById('total').innerHTML = total
+         }
+         else{
+            document.getElementById('total').innerHTML = '120'
+
+         }
+
+
          const displayData2 = document.getElementById("displayData2")
          const parseduser = JSON.parse(shippingaddress)
          displayData2.innerHTML = (  '<br>' +(parseduser.City) +  '<br>'  + (parseduser.Country)  +  '<br>'  + (parseduser.firstname)  +  '<br>'  + (parseduser.Lastname)  +  '<br>'  + (parseduser.address)  +  '<br>'  + (parseduser.Postalcode) )

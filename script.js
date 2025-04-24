@@ -174,7 +174,12 @@ function saveValue(value) {
 
 
 function allowalphabetsonly(inputField) {
-   inputField.value = inputField.value.replace(/[^a-zA-Z]/g, '')
+   inputField.value = inputField.value.replace(/[^a-zA-Z- ]/g, '')
+}
+
+
+function allowalphabetsandnumbers(inputField) {
+   inputField.value = inputField.value.replace(/[^a-zA-Z-1-9-.-@]/g, '')
 }
 
 
@@ -217,14 +222,24 @@ function addone(){
    count3; 
    count4; 
 document.getElementById('counter').textContent = count;
- document.getElementById('120$').textContent = Math.trunc(count2 += 120.90);
+const Price = document.getElementById('120$').textContent = Math.trunc(count2 += 120.90);
 
- document.getElementById('subtotal').textContent = 
+localStorage.setItem("Price",Price)
+
+const subtotal =   document.getElementById('subtotal').textContent = 
  Math.trunc(count3 += 120.90);
 
+ localStorage.setItem("Subtotal",subtotal)
+
+
+
+
+//  const total = document.getElementById("toal")
 
 // document.getElementById('subtotal').textContent = count2 += 120.90;
-document.getElementById('total').textContent = Math.trunc(count4 += 120.90);
+const total =   document.getElementById('total').textContent = Math.trunc(count4 += 120.90);
+localStorage.setItem("Total",total)
+
 
 }
 

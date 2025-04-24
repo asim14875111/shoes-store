@@ -227,7 +227,7 @@
                         <!-- <p id="valuedisplayed" ></p> -->
                      </div>
                      <div>
-                        <h6>$20</h6>
+                        <h6 class="-m-1" >$20</h6>
                      </div>
                   </div>
                   <!-- <div class="checkbox2"></div> -->
@@ -279,7 +279,7 @@
                      <div  class="inp-div  pr-[12.5px]  flex gap-4 pl-[2.6rem] py-3 rounded-full font-medium border border-[#D6D8EE]">
                         <input pattern="[^1-9-/]"
                            onclick="allowslash()" 
-                           onkeypress="if(this.value.length===7) return false"   type="tel" id="mm-yy" placeholder="MM/YY" class="outline-0 w-11/12" required>
+                           onkeypress="if(this.value.length===5) return false"   type="tel" id="mm-yy" placeholder="MM/YY" class="outline-0 w-11/12" required>
                      </div>
                   </div>
                   <div>
@@ -400,28 +400,27 @@
                </div>
             </div>
          </div>
-         <div class="second-child   pt-[3.75rem] pl-[3.75rem] pr-[4.5rem] bg-[#fafbfc] w-full items-center  md:items-start">
-            <!-- <div class="first-cart flex items-center gap-60 ">
-               <div class="img-nd-heading flex items-center gap-5 ">
-                  <img src="images/Group 1000004336-8f86fa9f.png" alt="">
-                  <h6>Nike Sneakers</h6>
-               </div>
-               <h5>$120.90</h5>
-               </div> -->
-            <!-- <div class="sub-heading flex items-center pt-8 pl-6 gap-60 ">
-               <h6>Nike sneakers</h6>
-               <h6>$120.90</h6>
-               </div> -->
+         <div class="second-child   pt-[3.75rem] pl-[3.75rem] pr-[4.0rem] bg-[#fafbfc] w-full items-center  md:items-start">
             <div class="second-cart flex items-center gap-60 ">
                <div class="img-nd-heading flex pt-8  items-center gap-5 ">
                   <img src="images/second-shoe.png" alt="">
+                  <p  onclick="addone()"  id="counter" class="bg-gray-700 cursor-pointer text-white absolute top-[180px] left-[826px] text-xs rounded-full px-2 py-[1.1px]" >1</p>
                   <h6>Nike Sneakers</h6>
                </div>
-               <h5>$120.90</h5>
+               <h5 class="flex" >$<span id="120$">120</span>
+                  <span>.90</span>
+
+               </h5>
             </div>
             <div class="sub-total flex items-center mt-5 pt-4 w-fit gap-[374px] border-t ">
                <h6>Subtotal:</h6>
-               <h6>$362.70</h6>
+               <h6  class="flex">
+                  $
+                  <span id="subtotal">
+                  120
+               </span>
+               <span>.90</span>
+               </h6>
             </div>
             <div class="sub-total flex items-center   pt-7 pb-4 w-fit gap-[398px] border-b ">
                <h6>Shipping:</h6>
@@ -429,7 +428,13 @@
             </div>
             <div class=" flex total  gap-[400px] pt-4">
                <h6 class="font-semibold" >Total</h6>
-               <h6  class="font-semibold" >$362.70</h6>
+               <h6   class="font-semibold flex">
+                $ <span id="total">
+                     120
+                  </span>
+                                 <span>.90</span>
+
+                </h6>
             </div>
             <div class="border-[#D6D8EE] px-[2.64rem] w-fit  bg-white border rounded-[32px] px-10 mt-9" >
                <div>

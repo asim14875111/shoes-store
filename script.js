@@ -7,7 +7,7 @@ const countdowninterval = setInterval(() => {
    timeleft--;
    document.getElementById("timer").innerHTML = (`${minutes}:${seconds} `)
 
-   if (timeleft <= 0) {
+   if (timeleft <= -1) {
       clearInterval(countdowninterval);
       alert("time's up!")
    };
@@ -203,3 +203,29 @@ function checkthebox() {
    checkbox.checked = !checkbox.checked
 
 }
+
+
+const counterdisplay = document.getElementById('counter');
+
+let count = 1;
+let count2 = 120.90;
+let count3 = 120.90;
+let count4 = 120.90;
+function addone(){
+   count++;
+   count2; 
+   count3; 
+   count4; 
+document.getElementById('counter').textContent = count;
+ document.getElementById('120$').textContent = Math.trunc(count2 += 120.90);
+
+ document.getElementById('subtotal').textContent = 
+ Math.trunc(count3 += 120.90);
+
+
+// document.getElementById('subtotal').textContent = count2 += 120.90;
+document.getElementById('total').textContent = Math.trunc(count4 += 120.90);
+
+}
+
+

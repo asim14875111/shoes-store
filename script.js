@@ -18,8 +18,7 @@ const openBtn = document.querySelectorAll("#openModal")
 const closeBtn = document.querySelectorAll("#closeModal")
 const modal = document.getElementById("modal");
 
-openBtn.forEach(openModal => {
-
+openBtn.forEach(openModal => {   
    openModal.addEventListener("click", () => {
       modal.classList.add("open");
 
@@ -117,13 +116,7 @@ function savedata() {
    if (email == '' || email == null) {
       alert("kindly fill the form!")
       return false
-   } else {
-      // box.style.display = 'block'
-      // window.location.href = "page2.html"
-
-
-   }
-
+   } 
    // Reseting inputs after completing the order
 
    const dataform = document.getElementById('dataform')
@@ -133,7 +126,6 @@ function savedata() {
 
 
    if (!inpelement.checked) {
-      // preventDefault();
       alert("Agree to the Terms of Service!")
    } else {
       box.style.display = 'block'
@@ -212,18 +204,34 @@ function checkthebox() {
 
 const counterdisplay = document.getElementById('counter');
 
-let count = 1;
-let count2 = 120.90;
-let count3 = 120.90;
-let count4 = 120.90;
-function addone(){
-   count++;
-   count2; 
-   count3; 
-   count4; 
-document.getElementById('counter').textContent = count;
-const Price = document.getElementById('120$').textContent = Math.trunc(count2 += 120.90);
 
+
+
+const valuespan = document.getElementById('value');
+const addbutton = document.getElementById('addbtn')
+const subtractbutton = document.getElementById('subtractbtn')
+
+
+let currentValue = 1;
+
+let count2 = 120.90;
+let  count3 = 120.9; 
+let count4 = 120.90;
+
+function updateValue(){
+   valuespan.textContent = currentValue
+   localStorage.setItem("Quantity", valuespan)
+
+   const Quantity = document.getElementById('value').textContent
+   localStorage.setItem("Quantity",Quantity)
+   
+
+}
+
+addbutton.addEventListener('click', () =>{
+   currentValue++;
+   
+ const Price = document.getElementById('120$').textContent = Math.trunc(count2 += 120.90);
 localStorage.setItem("Price",Price)
 
 const subtotal =   document.getElementById('subtotal').textContent = 
@@ -231,17 +239,37 @@ const subtotal =   document.getElementById('subtotal').textContent =
 
  localStorage.setItem("Subtotal",subtotal)
 
-const Quantity = document.getElementById("counter").innerHTML
 
-localStorage.setItem("Quantity",Quantity )
+ const total =   document.getElementById('total').textContent = Math.trunc(count4 += 120.90);
+localStorage.setItem("Total",total)
 
-//  const total = document.getElementById("toal")
+   updateValue();
+})
 
-// document.getElementById('subtotal').textContent = count2 += 120.90;
-const total =   document.getElementById('total').textContent = Math.trunc(count4 += 120.90);
+
+subtractbutton.addEventListener('click', () => {
+
+if(currentValue > 0){
+   currentValue--;
+      
+ const subtractedprice = document.getElementById('120$').textContent = Math.trunc(count2 -= 120.90);
+ localStorage.setItem("Price",subtractedprice)
+
+
+ const subtotal =   document.getElementById('subtotal').textContent = 
+ Math.trunc(count3 -= 120.90);
+
+ localStorage.setItem("Subtotal",subtotal)
+
+
+ const total =   document.getElementById('total').textContent = Math.trunc(count4 -= 120.90);
 localStorage.setItem("Total",total)
 
 
+ 
+   updateValue();
+
 }
+})
 
 

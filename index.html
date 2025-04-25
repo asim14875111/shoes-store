@@ -46,8 +46,8 @@
       <div class="child-containers flex flex-col-reverse xl:flex  xl:flex-row  justify-self-center">
          <div class="first-child  flex  flex-col pt-16items-center p-12   md:items-start md:pl-24   md:pr-[1.7rem]  ">
             <div class="checkout-heading object-top  pb-16
-            absolute pl-0 top-28 xl:static
-            ">
+               absolute pl-0 top-28 xl:static
+               ">
                <div class="div">
                   <h4 class="text-4xl pb-4 font-semibold" >Checkout</h4>
                </div>
@@ -109,7 +109,6 @@
             <form name="myform" id="dataform" autocomplete="off" >
                <div class="email-adress  text-xs m-0 text-[#84849a] bg-white relative -mb-2 ml-9 w-fit self-start ">Email Address</div>
                <div  class="email-input  flex   border-[1.5px] rounded-full border-[#D6D8EE] gap-4 items-center py-4 w-fit pr-2  pl-10 w-full  ">
-                  <!-- pr-[255px]/   -->
                   <div>
                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_308_1503)">
@@ -180,7 +179,6 @@
                      </div>
                   </div>
                </div>
-               <!-- pr-[260px] -->
                <div  class="adress w-fit pr-1  flex gap-3 mt-9 font-medium py-3 pl-10 border border-[#D6D8EE] rounded-full w-full sm:w-auto ">
                   <div class="camera-img">
                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3org/2000/svg">
@@ -225,14 +223,11 @@
                      <div class="check-box-nd-h6 flex items-center gap-4 ">
                         <input id="dhlpriceinp" onclick="storeValue(this.value)"  type="radio" value="DHL with price" class="cursor-pointer">
                         <span  onclick="storeValue(dhlpriceinp.value),togglecheckbox(this) " class="font-normal cursor-pointer text-[#4b4e68]"  id="checkboxValue">DHL with price</span>
-                        <!-- <h6  onclick="togglecheckbox(this)" class="font-normal text-[#4b4e68]" >DHL with price</h6> -->
-                        <!-- <p id="valuedisplayed" ></p> -->
                      </div>
                      <div>
                         <h6 class="-m-1" >$20</h6>
                      </div>
                   </div>
-                  <!-- <div class="checkbox2"></div> -->
                </div>
                <div class="payment-method self-start">
                   <h6 class="text-2xl font-semibold  pt-16 pb-2 text-[#000034]">Payment method</h6>
@@ -240,7 +235,6 @@
                </div>
                <div class="email-adress text-xs m-0 self-start text-[#84849a] bg-white relative -mb-2 ml-9 mt-8  w-fit ">Card Number</div>
                <div  class="number-input  flex w-fit   border-[1.5px] rounded-full border-[#D6D8EE] gap-4 items-center py-4 w-full pr-1 pl-10">
-                  <!-- pr-[255px] -->
                   <div>
                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_376_468)">
@@ -257,7 +251,6 @@
                   <div class="w-full" ><input pattern="[0-9]"  maxlength="12" id="card-num" class="outline-0 font-medium w-full text-black" placeholder="2587 9860 2354" type="number" onkeypress="if(this.value.length===12) return false" required>
                   </div>
                </div>
-               <!-- pr-[255px] -->
                <div class="name-input mt-9  flex w-full  border-[1.5px] rounded-full border-[#D6D8EE] gap-4 items-center py-4 pl-10  ">
                   <div>
                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -303,12 +296,10 @@
                <div class="flex gap-5 "  >
                   <input value="Same as shipping address" onclick="saveValue(this.value)" class="button" id="closeModal"  type="radio">
                   <span onclick="saveValue(closeModal.value),checkthisbox()"  class="font-normal cursor-pointer text-[#4b4e68]" id="closeModal" >Same as shipping address</span>
-                  <!-- <p  class="font-normal text-[#4b4e68]" >Same as shipping address</p> -->
                </div>
                <div class="flex gap-5 pt-5 "  >
                   <input onclick="saveValue(this.value)" value="Different billing address" class="button" id="openModal" type="radio">
                   <span id="openModal"  onclick="checkthebox()"  class="font-normal cursor-pointer text-[#4b4e68]" >Use a different billing address</span>
-                  <!-- <p    >Use a different billing address</p> -->
                </div>
                <div class="modal" id="modal">
                   <div class="modal-inner w-full ">
@@ -348,7 +339,7 @@
                            <h6 class="text-xs relative bg-white w-fit px-1 text-[#84849a] ml-9 -mb-2 " >last Name</h6>
                            <div class="inp-div flex gap-[10px] 
                               pl-[1.5rem] py-3 rounded-full font-medium border border-[#D6D8EE]" >
-                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <g clip-path="url(#clip0_355_687)">
                                     <path d="M10 10C10.9889 10 11.9556 9.70676 12.7779 9.15735C13.6001 8.60794 14.241 7.82705 14.6194 6.91342C14.9978 5.99979 15.0969 4.99446 14.9039 4.02455C14.711 3.05465 14.2348 2.16373 13.5355 1.46447C12.8363 0.765206 11.9454 0.289002 10.9755 0.0960758C10.0055 -0.0968503 9.00021 0.00216643 8.08658 0.380605C7.17295 0.759043 6.39206 1.39991 5.84265 2.22215C5.29324 3.0444 5 4.0111 5 5C5.00132 6.32568 5.52853 7.59668 6.46593 8.53407C7.40332 9.47147 8.67432 9.99868 10 10ZM10 1.66667C10.6593 1.66667 11.3037 1.86217 11.8519 2.22844C12.4001 2.59471 12.8273 3.1153 13.0796 3.72439C13.3319 4.33348 13.3979 5.0037 13.2693 5.6503C13.1407 6.29691 12.8232 6.89085 12.357 7.35703C11.8908 7.8232 11.2969 8.14067 10.6503 8.26929C10.0037 8.3979 9.33348 8.33189 8.72439 8.0796C8.1153 7.82731 7.59471 7.40007 7.22844 6.8519C6.86216 6.30374 6.66667 5.65927 6.66667 5C6.66667 4.11595 7.01786 3.2681 7.64298 2.64298C8.2681 2.01786 9.11595 1.66667 10 1.66667Z" fill="#84849A"></path>
                                     <path d="M10 11.6672C8.01155 11.6694 6.10518 12.4603 4.69914 13.8664C3.29309 15.2724 2.50221 17.1788 2.5 19.1672C2.5 19.3883 2.5878 19.6002 2.74408 19.7565C2.90036 19.9128 3.11232 20.0006 3.33333 20.0006C3.55435 20.0006 3.76631 19.9128 3.92259 19.7565C4.07887 19.6002 4.16667 19.3883 4.16667 19.1672C4.16667 17.6201 4.78125 16.1364 5.87521 15.0424C6.96917 13.9485 8.4529 13.3339 10 13.3339C11.5471 13.3339 13.0308 13.9485 14.1248 15.0424C15.2188 16.1364 15.8333 17.6201 15.8333 19.1672C15.8333 19.3883 15.9211 19.6002 16.0774 19.7565C16.2337 19.9128 16.4457 20.0006 16.6667 20.0006C16.8877 20.0006 17.0996 19.9128 17.2559 19.7565C17.4122 19.6002 17.5 19.3883 17.5 19.1672C17.4978 17.1788 16.7069 15.2724 15.3009 13.8664C13.8948 12.4603 11.9884 11.6694 10 11.6672Z" fill="#84849A"></path>
@@ -406,14 +397,29 @@
             <div class="second-cart flex items-center gap-[237px] ">
                <div class="img-nd-heading flex pt-8  items-center gap-5 ">
                   <img src="images/second-shoe.png" alt="">
-                  <p   onclick="addone()"  id="counter" class="bg-gray-700 cursor-pointer text-white  -ml-[39px] -mt-[54px] text-xs rounded-full px-2 py-[1.1px]" >1</p>
+                  <!-- <p     id="counter"  >1</p> -->
+
+                  <p class="bg-gray-700 cursor-pointer text-white  -ml-[39px] -mt-[54px] text-xs rounded-full px-2 py-[1.1px]" id="value">1</p>
+
+
                   <h6>Nike Sneakers</h6>
+                  <br>
+     
                </div>
+               <div>
                <h5 class="flex pt-8">
                   $<span id="120$">120</span>
                   <span>.90</span>
-
                </h5>
+
+<div class="flex justify-between items-center" >
+   <img id="subtractbtn" class="w-[20px] h-[20px] cursor-pointer" src="images/icons8-minus-24.png" alt="">
+               <svg class="cursor-pointer" id="addbtn" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="18px" viewBox="0 0 50 50">
+                  <path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 24 13 L 24 24 L 13 24 L 13 26 L 24 26 L 24 37 L 26 37 L 26 26 L 37 26 L 37 24 L 26 24 L 26 13 L 24 13 z"></path>
+                  </svg>
+            </div>
+
+            </div>
             </div>
             <div class="sub-total flex items-center mt-5 pt-4 w-fit gap-[374px] border-t ">
                <h6>Subtotal:</h6>
@@ -421,9 +427,10 @@
                   $
                   <span id="subtotal">
                   120
-               </span>
-               <span>.90</span>
+                  </span>
+                  <span>.90</span>
                </h6>
+               
             </div>
             <div class="sub-total flex items-center   pt-7 pb-4 w-fit gap-[396px] border-b ">
                <h6>Shipping:</h6>
@@ -432,12 +439,11 @@
             <div class=" flex total  gap-[400px] pt-4">
                <h6 class="font-semibold" >Total</h6>
                <h6   class="font-semibold flex">
-                $ <span id="total">
-                     120
+                  $ <span id="total">
+                  120
                   </span>
-                                 <span>.90</span>
-
-                </h6>
+                  <span>.90</span>
+               </h6>
             </div>
             <div class="border-[#D6D8EE] px-[2.63rem] w-fit  bg-white border rounded-[32px] px-10 mt-9" >
                <div>
@@ -557,7 +563,12 @@
                </p>
             </div>
          </div>
+
       </div>
+
+
+
+
       <script src="script.js" ></script>
    </body>
 </html>

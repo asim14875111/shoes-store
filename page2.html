@@ -17,6 +17,14 @@
          .order-detail{
          font-family: 'Courier New', Courier, monospace, sans-serif;
          }
+  .minus{
+   display: none;
+  }
+
+
+
+
+
       </style>
    </head>
    <body  class="bg-[#f3f3f3a6]" >
@@ -62,25 +70,25 @@
                <h5 class="font-medium  flex items-center gap-2">
                   <img class="w-12" src="images/second-shoe.png" alt="">
                   <p     id="counter2nd-pg" class="bg-gray-700 py-[1px] cursor-pointer text-white  absolute left-[92px] top-[217px]  text-[8px]  rounded-full 
-                  px-[5px]">1</p>
+                     px-[5px]">1</p>
                   Nike Sneakers 
                </h5>
-               <h5 class="font-medium">
-                  
+               <div>
+               <h5 class="font-medium ">
                   <span>$</span>
                   <span  id="price">120</span>
-                  
-                  
                   <span>  .90</span>
-                  
-                </h5>
+               </h5>
+               <h6 id="minusprice" class="bg-white minus absolute  px-8  top-[230px] z-50 " >minus</h6>
+            </div>
+
             </div>
             <div class=" flex justify-between  pb-2 pt-2">
                <h5 class="font-medium">Sub Total :</h5>
                <h5  class="font-medium">
-<span>$</span>
-<span id="Subtotal">120</span>
-<span>.90</span>
+                  <span>$</span>
+                  <span id="Subtotal">120</span>
+                  <span>.90</span>
                </h5>
             </div>
             <div class=" flex justify-between - pb-2 pt-2">
@@ -98,15 +106,13 @@
             <div class=" flex justify-between border-t-2 pb-4 pt-4 ">
                <h5 class="font-bold "> Total : </h5>
                <h5  class="font-bold">
-
                   <span>$</span>
                   <span id="total">120</span>
                   <span>.90</span>
-
                </h5>
             </div>
          </div>
-         <div class="child-box-2 p-6 md:p-0 user-data flex flex-col  lg:flex lg:flex-row items-center lg:items-start  self-center  gap-20 w-full pt-5 md:pr-0 mr-2 justify-center  mt-4 mb-8   w-0/12  h-full  ">
+         <div class="child-box-2 p-6 md:p-0 user-data flex flex-col  lg:flex lg:flex-row items-center lg:items-start  self-center  gap-20 w-full pt-5 md:pr-0 mr-2 justify-center  mt-4 mb-8   w-0/12  h-full">
             <div>
                <div class=" rounded   border w-fit justify-self-center self-center " >
                   <h1 class="text-2xl border-b pl-9 pt-4 justify-self-center font-medium  text-xl flex items-center  w-fit order-detail font-semibold text-gray-800  pb-3  w-full  "> <img class="w-8" src="images/icons8-order-80.png" alt="">Order Details</h1>
@@ -155,16 +161,17 @@
           document.getElementById("displayData").innerHTML =  savedValue;
          
           const price = localStorage.getItem("Price")
-       
-       if(price){
+  
+ 
+
+         if(price)
+         {
           document.getElementById("price").innerHTML = 
           price
-       }else{
-
+         }else{
+         
          document.getElementById("price").innerHTML = 
-      '120'
-
-       }
+          '120'}
          
          const shippingaddress = localStorage.getItem('Shipping Address')
          
@@ -178,18 +185,18 @@
          else{
             document.getElementById("Subtotal").innerHTML = '120'
          }
-
+         
          const total = localStorage.getItem('Total')
-
+         
          if(total){
             document.getElementById('total').innerHTML = total
          }
          else{
             document.getElementById('total').innerHTML = '120'
-
+         
          }
-
-
+         
+         
          const displayData2 = document.getElementById("displayData2")
          const parseduser = JSON.parse(shippingaddress)
          displayData2.innerHTML = (  '<br>' +(parseduser.City) +  '<br>'  + (parseduser.Country)  +  '<br>'  + (parseduser.firstname)  +  '<br>'  + (parseduser.Lastname)  +  '<br>'  + (parseduser.address)  +  '<br>'  + (parseduser.Postalcode) )
@@ -200,20 +207,11 @@
          const parseddata3 = JSON.parse(paymentmethod)
          displayData3.innerHTML = (  '<br>' +(parseddata3.Cardnumber) +  '<br>'  + (parseddata3.Nameoncard)  +  '<br>'  + (parseddata3.Monthyear)  +  '<br>'  + (parseddata3.Cvv))
          
-         // document.getElementById("displayData3").innerHTML =
-         // "- Card Details: " + '<br>' +  paymentmethod   ;
-         
-         
          const differentaddress = localStorage.getItem("different billing address")
          const displayData4 = document.getElementById("displayData4")
          const parseddata4 = JSON.parse(differentaddress)
          displayData4.innerHTML = ( '<br>' + (parseddata4.Country) +  '<br>'  + (parseddata4.Firstname)  +  '<br>'  + (parseddata4.Lastname)  +  '<br>'  + (parseddata4.Address)  +  '<br>'  + (parseddata4.City) +  '<br>'  + (parseddata4.PostalCode))
-         
-          
-         
-         // document.getElementById("displayData4").innerHTML =
-         // "- Different billing Address: " + '<br>' + differentaddress;
-         
+
          
          window.onload = function(){
              const storedvalue = localStorage.getItem('Shipping')
@@ -222,10 +220,7 @@
                  document.getElementById('shipping').textContent = storedvalue;
                  document.getElementById('billingaddress').textContent = savedvalue
              }
-             // if(savedvalue){
-             // }
-         
-         
+
          
              const name = localStorage.getItem('First name')
              const name2 = JSON.parse(name)
@@ -234,15 +229,11 @@
          
          
                   
-    const quantity =  localStorage.getItem("Quantity");
-
+         const quantity =  localStorage.getItem("Quantity");
+         
          document.getElementById("counter2nd-pg")
          .textContent = quantity
-         
-         
-         
-         
-           
+    
       </script> 
    </body>
 </html>
